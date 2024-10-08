@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import {DM_Sans} from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
-const dm_sans = DM_Sans({weight:'variable', subsets:['latin'], variable:'--font-dm_sans'})
+
 
 export const metadata: Metadata = {
   title: "Dina Holding | SA",
@@ -16,11 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${dm_sans.variable} antialiased overflow-hidden`}
-      >
-
+      <body className={`bg-hero bg-no-repeat bg-cover bg-fixed -z-10 antialiased`}>
+        <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

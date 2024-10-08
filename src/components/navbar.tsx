@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative">
+    <header className="relative bg-white">
       <Banner />
       <div className="container mx-auto flex items-center justify-between p-3 md:px-20">
         <div className="flex items-center">
