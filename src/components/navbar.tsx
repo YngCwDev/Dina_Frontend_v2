@@ -27,14 +27,14 @@ const Navbar = () => {
   };
 
   const handleCategoryClick = (categoryName: string) => {
-    setOpenCategories((prev) => ({
+    setOpenCategories((prev:any) => ({
       ...prev,
       [categoryName]: !prev[categoryName],
     }));
   };
 
   return (
-    <header className="relative bg-white">
+    <header className="relative md:bg-white">
       <Banner />
       <div className="container mx-auto flex items-center justify-between p-3 md:px-20">
         <div className="flex items-center">
@@ -112,7 +112,7 @@ const DesktopMenu = () => (
   </NavigationMenu>
 );
 
-const MobileMenu = ({ openCategories, handleCategoryClick }) => {
+const MobileMenu = ({ openCategories, handleCategoryClick }: {openCategories: any, handleCategoryClick:any}) => {
   return (
     <motion.div
       className="absolute left-0 top-full w-full bg-white shadow-md z-10"

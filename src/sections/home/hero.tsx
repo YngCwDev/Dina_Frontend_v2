@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <div className="-top-10">
       <div className="flex items-center justify-between">
-        <div className="w-full md:p-[8vw] py-[30vw] px-[5vw] md:text-start text-center text-1xl space-y-4">
+        <div className="w-full md:p-[12vw] py-[30vw] px-[5vw]   text-center text-1xl space-y-4">
           <h1 className="md:text-4xl text-[30px]  text-red-600 font-bold">
             Your Solution for Productivity And Safety
           </h1>
-          <p className="md:text-black text-white">
+          <p className="md:text-black md:text-2xl text-white">
             Maximize efficiency and safeguard your workforce with our reliable
             products.
           </p>
@@ -22,11 +22,11 @@ const Hero = () => {
           width={900}
           height={800}
           alt="hero-image-scavation-area"
-          className="md:flex hidden"
+          className=" hidden"
         />
       </div>
-      <div className="md:px-[30vw] px-[5vw] py-[3vw] md:text-start text-center bg-white">
-        <p className="">
+      <div className="md:px-[24vw] px-[5vw] md:py-[3vw] py-[5vw] md:text-start  bg-white">
+        <p className="md:text-lg py-3">
           We proudly offer an extensive selection of high-quality electrical
           materials, powerful generators, essential personal protective
           equipment (PPE), durable batteries, premium oils, and lubricants, all
@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="flex items-center">
           <Button
             variant={"outline"}
-            className="my-4  bg-red-800 text-white px-4 h-6"
+            className="my-4  bg-red-800 text-white px-4  py-4 h-6"
           >
             Contact Us
           </Button>
@@ -50,9 +50,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className="h-16 w-full">
-
-      </div>
+      <div className="h-16 w-full"></div>
     </div>
   );
 };
