@@ -4,11 +4,12 @@ import Img1 from "@/assets/img1.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
 const Hero = () => {
   return (
     <div className="-top-10">
-      <div className="flex items-center justify-between">
-        <div className="w-full md:p-[12vw] py-[30vw] px-[5vw]   text-center text-1xl space-y-4">
+      <div className="flex flex-col items-center py-[8vw] gap-4">
+        <div className="w-full  px-[5vw]   text-center text-1xl space-y-4">
           <h1 className="md:text-4xl text-[30px]  text-red-600 font-bold">
             Your Solution for Productivity And Safety
           </h1>
@@ -17,23 +18,25 @@ const Hero = () => {
             products.
           </p>
         </div>
-        <Image
-          src={Img1}
-          width={900}
-          height={800}
-          alt="hero-image-scavation-area"
-          className=" hidden"
-        />
+        <div className="md:flex hidden">
+          <div className="flex w-full max-w-sm  flex-col gap-2 items-center space-x-2">
+            <Input type="email" placeholder="Business Email" className="w-[20vw] bg-white h-10"/>
+            <Button type="submit" variant={'outline'} className="bg-red-800 text-white">Get a Catalogue</Button>
+          </div>
+        </div>
       </div>
       <div className="md:px-[24vw] px-[5vw] md:py-[3vw] py-[5vw] md:text-start  bg-white">
         <p className="md:text-lg py-3">
           We proudly offer an extensive selection of high-quality electrical
-          materials, powerful generators, essential personal protective
-          equipment (PPE), durable batteries, premium oils, and lubricants, all
-          carefully designed to optimize your industrial operations. Whether
-          you're in construction, mining, or energy, our products ensure peak
-          efficiency, reliable performance, and maximum safety for your
-          workforce.
+          materials, robust power generators, essential personal protective
+          equipment (PPE), reliable industrial batteries, premium oils and
+          lubricants, as well as a comprehensive fleet of heavy machinery
+          available for rental. From excavators and loaders to cranes and
+          forklifts, our rental solutions are designed to meet the rigorous
+          demands of industries like construction, mining, and energy. These
+          products and services ensure peak operational efficiency, reliable
+          performance, and maximum safety, providing tailored support for your
+          workforce and industrial projects.
         </p>
         <div className="flex items-center">
           <Button
@@ -43,14 +46,13 @@ const Hero = () => {
             Contact Us
           </Button>
           <Button variant={"link"} className="flex items-center">
-            <Link href={"/quoteform"}>Get free quote</Link>
+            <Link href={"/quoteform"}>Request a quote</Link>
             <div>
               <ChevronRight size={18} strokeWidth={1} />
             </div>
           </Button>
         </div>
       </div>
-      <div className="h-16 w-full"></div>
     </div>
   );
 };
