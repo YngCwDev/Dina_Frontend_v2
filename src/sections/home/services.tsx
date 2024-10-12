@@ -2,7 +2,6 @@ import { Truck } from "lucide-react";
 import React from "react";
 
 const Services = () => {
-  const services = [];
   return (
     <>
       <div className="bg-zinc-100 h-96 px-[10vw] flex flex-col justify-center items-center">

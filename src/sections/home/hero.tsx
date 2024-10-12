@@ -21,7 +21,20 @@ const Hero = () => {
         <div className="md:flex hidden">
           <div className="flex w-full max-w-sm  flex-col gap-2 items-center space-x-2">
             <Input type="email" placeholder="Business Email" className="w-[20vw] bg-white h-10"/>
-            <Button type="submit" variant={'outline'} className="bg-red-800 text-white">Get a Catalogue</Button>
+            <div className="flex items-center flex-col">
+          <Button
+            variant={"outline"}
+            className="  bg-red-800 text-white px-4  py-4 h-6"
+          >
+            Get a free Catalogue
+          </Button>
+          <Button variant={"link"} className="flex items-center">
+            <Link href={"/quoteform"}>Request a quote</Link>
+            <div>
+              <ChevronRight size={18} strokeWidth={1} />
+            </div>
+          </Button>
+        </div>
           </div>
         </div>
       </div>
@@ -38,20 +51,7 @@ const Hero = () => {
           performance, and maximum safety, providing tailored support for your
           workforce and industrial projects.
         </p>
-        <div className="flex items-center">
-          <Button
-            variant={"outline"}
-            className="my-4  bg-red-800 text-white px-4  py-4 h-6"
-          >
-            Contact Us
-          </Button>
-          <Button variant={"link"} className="flex items-center">
-            <Link href={"/quoteform"}>Request a quote</Link>
-            <div>
-              <ChevronRight size={18} strokeWidth={1} />
-            </div>
-          </Button>
-        </div>
+        
       </div>
     </div>
   );

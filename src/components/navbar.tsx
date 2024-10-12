@@ -34,9 +34,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative md:bg-white">
+    <header className="relative bg-white">
       <Banner />
-      <div className="container mx-auto flex items-center justify-between p-3 md:px-20">
+      <div className="container mx-auto flex items-center justify-between p-1 md:px-20">
         <div className="flex items-center">
           <Link href="/" aria-label="Home">
             <Image src={logo} alt="" width={110} height={18} priority />
