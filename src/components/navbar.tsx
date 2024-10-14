@@ -5,15 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search, Globe, CircleUser, Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import img from "@/assets/img1.png";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Button, buttonVariants } from "@/components/ui/button";
 import data from "@/lib/data";
 import logo from "@/assets/LOGO.svg";
@@ -27,7 +20,7 @@ const Navbar = () => {
   };
 
   const handleCategoryClick = (categoryName: string) => {
-    setOpenCategories((prev:any) => ({
+    setOpenCategories((prev: any) => ({
       ...prev,
       [categoryName]: !prev[categoryName],
     }));
@@ -75,44 +68,21 @@ const Navbar = () => {
   );
 };
 
-const DesktopMenu = () => (
-  <NavigationMenu className="hidden md:block">
-    <NavigationMenuList className="gap-6 px-5">
-      {data.categories.map((category) => (
-        <NavigationMenuItem key={category.name}>
-          <NavigationMenuTrigger>
-            <Link href={category.link}>{category.name}</Link>
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {category.items.map((item) => (
-                <li key={item.name}>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href={item.name}
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      {item.name}
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      ))}
-      <NavigationMenuItem>
-        <Link href="/about" passHref legacyBehavior>
-          <NavigationMenuLink className={buttonVariants({ variant: "ghost" })}>
-            About
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-  </NavigationMenu>
-);
+const DesktopMenu = () => {
+  return (
+    <>
+      
+    </>
+  )
+};
 
-const MobileMenu = ({ openCategories, handleCategoryClick }: {openCategories: any, handleCategoryClick:any}) => {
+const MobileMenu = ({
+  openCategories,
+  handleCategoryClick,
+}: {
+  openCategories: any;
+  handleCategoryClick: any;
+}) => {
   return (
     <motion.div
       className="absolute left-0 top-full w-full bg-white shadow-md z-10"
