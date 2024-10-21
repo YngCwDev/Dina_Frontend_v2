@@ -8,6 +8,9 @@ import Quotecard from "@/sections/home/quotecard";
 import Services from "@/sections/home/services";
 import QuoteMassage from "@/sections/home/quotemassage";
 import Contact from "@/sections/home/contact";
+import Support from "@/sections/home/support";
+import Location from "@/sections/home/location";
+
 
 const Page = () => {
   return (
@@ -23,9 +26,17 @@ const Page = () => {
       <section>
         <Discover />
       </section>
+      
+      <section>
+        <Support />
+      </section>
 
       <section>
         <About />
+      </section>
+
+      <section>
+        <Location />
       </section>
 
       <section>

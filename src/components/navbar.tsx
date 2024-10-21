@@ -3,8 +3,22 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Globe, CircleUser, Menu, X, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  Search,
+  Globe,
+  CircleUser,
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+} from "lucide-react";
+import {
+  motion,
+  AnimatePresence,
+  easeIn,
+  easeInOut,
+  easeOut,
+} from "framer-motion";
 import img from "@/assets/img1.png";
 
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -18,23 +32,27 @@ const Navbar = () => {
   const handleClick = () => {
     setOpen(!isOpen);
   };
-
-  const handleCategoryClick = (categoryName: string) => {
+  const handleHover = (category: string) => {
     setOpenCategories((prev: any) => ({
       ...prev,
-      [categoryName]: !prev[categoryName],
+      [category]: !prev[category],
     }));
   };
 
   return (
     <header className="relative bg-white">
       <Banner />
-      <div className="container mx-auto flex items-center justify-between p-1 md:px-20">
+      <div className="container mx-auto flex items-center justify-between  md:px-20">
         <div className="flex items-center">
           <Link href="/" aria-label="Home">
             <Image src={logo} alt="" width={110} height={18} priority />
           </Link>
-          <DesktopMenu />
+          <AnimatePresence>
+            <DesktopMenu
+              handleHover={handleHover}
+              openCategories={openCategories}
+            />
+          </AnimatePresence>
         </div>
         <div className="hidden gap-2 md:flex">
           <Button variant="ghost" aria-label="Search">
@@ -60,7 +78,7 @@ const Navbar = () => {
         {isOpen && (
           <MobileMenu
             openCategories={openCategories}
-            handleCategoryClick={handleCategoryClick}
+            handleCategoryClick={handleHover}
           />
         )}
       </AnimatePresence>
@@ -68,12 +86,84 @@ const Navbar = () => {
   );
 };
 
-const DesktopMenu = () => {
+const DesktopMenu = ({
+  handleHover,
+  openCategories,
+}: {
+  handleHover: string;
+  openCategories: string;
+}) => {
   return (
     <>
-      
+      <nav className="ml-8 text-zinc-950  md:flex hidden z-10">
+        {/* Nav list categories */}
+        <ul className="flex">
+          {data.categories.map((category) => {
+            return (
+              <li
+                onMouseEnter={() => handleHover(category.name)}
+                onMouseLeave={() => handleHover(category.name)}
+                className="py-4 px-4 border-b-zinc-950"
+                key={category.name}
+              >
+                <Link
+                  href={category.link}
+                  className="font-semibold px-4 flex items-center gap-4"
+                >
+                  {category.name}
+                  <ChevronDown
+                    size={20}
+                    strokeWidth={1}
+                    className={`${
+                      openCategories[category.name] &&
+                      "transition rotate-180 duration 300 ease-linear"
+                    }`}
+                  />
+                </Link>
+
+                {openCategories[category.name] && (
+                  /* SubNav list categories - viewport */
+                  <motion.div
+                    className=" flex justify-center gap-16 py-16 w-full absolute drop-shadow-md left-0 mt-4
+                 bg-white"
+                  >
+                    {/* SubNav Content */}
+                    <ul className="flex gap-8 text-[14px]  justify-center">
+                      {category.items.map((items) => {
+                        return (
+                          <div>
+                            <h1 className="font-semibold text-zinc-950 text-[16px] p-2">
+                              {items.name}
+                            </h1>
+                            {items.sub_items.map((sub_item) => {
+                              return (
+                                <li className="p-2 hover:font-semibold">
+                                  <Link href={sub_item}>{sub_item}</Link>
+                                </li>
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
+                    </ul>
+                    <div className="text-[16px]  underline font-medium">
+                      <Image src={img} width={350} height={350} alt="" />
+                      <Link href={""}>
+                        See more {category.name.toLowerCase()} here
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </li>
+            );
+          })}
+          <li className="py-4 px-4 font-semibold">
+            <Link href="/about">About us</Link>
+          </li>
+        </ul>
+      </nav>
     </>
-  )
+  );
 };
 
 const MobileMenu = ({
@@ -103,7 +193,7 @@ const MobileMenu = ({
               <li
                 onClick={() => handleCategoryClick(category.name)}
                 className={`p-4 cursor-pointer flex items-center justify-between rounded-lg ${
-                  openCategories[category.name] ? "bg-slate-100" : ""
+                  openCategories[category.name] && "bg-slate-100"
                 }`}
               >
                 <div>{category.name}</div>
@@ -111,7 +201,7 @@ const MobileMenu = ({
                   size={16}
                   strokeWidth={1}
                   className={`transition-transform duration-200 ${
-                    openCategories[category.name] ? "rotate-180" : ""
+                    openCategories[category.name] && "rotate-180"
                   }`}
                 />
               </li>

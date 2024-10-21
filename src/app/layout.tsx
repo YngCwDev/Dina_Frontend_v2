@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-hero bg-no-repeat bg-cover bg-fixed -z-10 antialiased`}>
+      <body className={`bg-hero bg-no-repeat bg-cover bg-fixed -z-10 antialiased `}>
         <Navbar />
         {children}
         <Footer/>

@@ -55,8 +55,8 @@ const Discover = () => {
     <section className="bg-background py-12 md:py-16 relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between gap-6 mb-8 md:mb-12">
-          <h2 className="text-2xl pl-1 md:text-3xl font-bold text-foreground text-zinc-900">
-            Our Products And Services
+          <h2 className="text-2xl pl-1 md:text-3xl font-bold text-foreground text-zinc-900 px-[30vw]">
+            Explore Our Comprehensive Range of Services Tailored to your Project
           </h2>
         </div>
         <div className="relative">
@@ -87,12 +87,13 @@ const Discover = () => {
           </Button>
         </div>
         <div>
-        <p className="md:text-lg text-sm md:text-start text-center text-muted-foreground pt-4">
-            At Dina Holding SA, we provide a diverse range of services including
-            heavy equipment rentals, electrical materials, and personal
-            protective equipment (PPE). Our expert technical consulting ensures
-            that you receive tailored solutions to enhance your operational
-            efficiency.
+          <p className="md:text-lg text-sm md:text-start text-center text-muted-foreground pt-4 text-zinc-950">
+            At Dina Holding SA, we provide innovative solutions across various
+            sectors including mining, construction, energy, and healthcare. Our
+            services encompass heavy equipment rentals, technical consulting,
+            and the supply of essential materials like PPE and lubricants. We
+            are dedicated to enhancing productivity while ensuring the highest
+            safety standards.
           </p>
         </div>
       </div>
@@ -116,17 +117,17 @@ const ProductCard = ({
           <Image
             src={img3}
             alt={title}
-            layout="fill"
-            objectFit="cover"
-            className="transition-opacity duration-300 group-hover:opacity-80"
+            width= {undefined}
+            fill
+            className="object-cover transition-opacity duration-300 group-hover:opacity-80"
           />
-          <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-300 group-hover:opacity-60" />
+          <div className="absolute inset-0 bg-zinc-950 opacity-10 transition-opacity duration-300 group-hover:opacity-40" />
         </div>
-        <motion.div className="absolute bottom-0 left-0 right-0 p-4 z-10 flex flex-col items-start h-36">
+        <motion.div className="absolute  bg-gradient-to-t from-zinc-950 to-transparent bottom-0 left-0 right-0 p-4 z-10 flex flex-col items-start h-36">
           <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">
             {title}
           </h3>
-          <p className="text-xs md:text-sm text-gray-200">{description}</p>
+          <p className="text-xs md:text-sm text-zinc-100">{description}</p>
           <Link
             href={link}
             className="flex gap-1 items-center text-white  text-xs md:text-sm"

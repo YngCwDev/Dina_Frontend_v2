@@ -63,10 +63,10 @@ function Footer() {
 const DesktopFooter = () => {
   return (
     <>
-      <footer className="bg-zinc-900 text-white">
+      <footer className="bg-zinc-950 text-white">
         <div className="container mx-auto px-4 py-8 md:px-[10%]">
           <div className="flex flex-wrap justify-center gap-8 md:flex-nowrap md:gap-28">
-            <div className=" flex flex-col">
+            <div className=" flex flex-col -z-8">
               <Image
                 className="w-[100px] md:w-[200px]"
                 src={LOGO}

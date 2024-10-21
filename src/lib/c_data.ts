@@ -6,7 +6,7 @@ const data = {
       items: [
         {
           name: "Electrical Components",
-          link:'',
+          link: "",
           sub_items: [
             "Circuit Breakers",
             "Transformers",
@@ -18,7 +18,7 @@ const data = {
         },
         {
           name: "Generators and Batteries",
-          link:'',
+          link: "",
           sub_items: [
             "Portable Generators",
             "Standby Generators",
@@ -30,7 +30,7 @@ const data = {
         },
         {
           name: "Personal Protective Equipment (PPE)",
-          link:'',
+          link: "",
           sub_items: [
             "Helmets",
             "Safety Glasses",
@@ -40,9 +40,9 @@ const data = {
           ],
           sub_items_link: [""],
         },
-       /* {
+        {
           name: "Oils and Lubricants",
-          link:'',
+          link: "",
           sub_items: [
             "Engine Oil",
             "Hydraulic Oil",
@@ -51,10 +51,10 @@ const data = {
             "Coolants",
           ],
           sub_items_link: [""],
-        },*/
+        },
         {
           name: "Spare Parts",
-          link:'',
+          link: "",
           sub_items: ["Filters", "Belts", "Bearings", "Pumps", "Seals"],
           sub_items_link: [""],
         },
@@ -66,7 +66,7 @@ const data = {
       items: [
         {
           name: "Heavy Machinery Rent",
-          link:'',
+          link: "",
           sub_items: [
             "Excavators",
             "Bulldozers",
@@ -78,7 +78,7 @@ const data = {
         },
         {
           name: "Technical Consulting",
-          link:'',
+          link: "",
           sub_items: [
             "Project Assessment",
             "Operational Efficiency",
@@ -88,9 +88,9 @@ const data = {
           ],
           sub_items_link: [""],
         },
-        /*{
+        {
           name: "Equipment Maintenance",
-          link:'',
+          link: "",
           sub_items: [
             "Preventive Maintenance",
             "Repair Services",
@@ -99,10 +99,10 @@ const data = {
             "Technical Support",
           ],
           sub_items_link: [""],
-        },*/
+        },
         {
           name: "Safety Training",
-          link:'',
+          link: "",
           sub_items: [
             "Workplace Safety",
             "Hazard Identification",
@@ -114,7 +114,7 @@ const data = {
         },
         {
           name: "Customer Support",
-          link:'',
+          link: "",
           sub_items: [
             "24/7 Assistance",
             "On-site Support",
@@ -132,7 +132,7 @@ const data = {
       items: [
         {
           name: "Industrial",
-          link:'',
+          link: "",
           sub_items: [
             "Manufacturing",
             "Processing Plants",
@@ -144,7 +144,7 @@ const data = {
         },
         {
           name: "Mining",
-          link:'',
+          link: "",
           sub_items: [
             "Open-pit Mining",
             "Underground Mining",
@@ -156,7 +156,7 @@ const data = {
         },
         {
           name: "Construction",
-          link:'',
+          link: "",
           sub_items: [
             "Civil Construction",
             "Building Infrastructure",
@@ -168,7 +168,7 @@ const data = {
         },
         {
           name: "Energy",
-          link:'',
+          link: "",
           sub_items: [
             "Power Generation",
             "Renewable Energy",
@@ -178,9 +178,9 @@ const data = {
           ],
           sub_items_link: [""],
         },
-        /*{
+        {
           name: "Healthcare",
-          link:'',
+          link: "",
           sub_items: [
             "Medical Equipment",
             "Laboratory Supplies",
@@ -192,7 +192,7 @@ const data = {
         },
         {
           name: "Cleaning",
-          link:'',
+          link: "",
           sub_items: [
             "Industrial Cleaning",
             "Facility Sanitation",
@@ -201,7 +201,7 @@ const data = {
             "Waste Management",
           ],
           sub_items_link: [],
-        },*/
+        },
       ],
     },
   ],

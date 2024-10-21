@@ -2,10 +2,12 @@ import Image from "next/image";
 import React from "react";
 import img2 from "@/assets/img-2.png";
 import img3 from "@/assets/img-3.png";
+import { MoveRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="bg-about bg-cover bg-center bg-no-repeat w-full p-[2%] md:px-[18%] px-4 text-white md:py-[5%] py-[10%]">
+    <div className="bg-zinc-950/100   bg-cover bg-center bg-no-repeat w-full p-[2%]  md:px-[18%] px-4 text-white md:py-[2%] py-[10%]">
       <div className="bg-white h-[10px] w-[60px]"></div>
       <div className="flex justify-between items-center flex-wrap">
         <div className="md:w-[45%]">
@@ -22,7 +24,7 @@ const About = () => {
           </p>
         </div>
         <Image
-          className="md:w-[30vw] w-[100%] border-4 md:my-0 my-4"
+          className="md:w-[30vw] w-[100%]  md:my-0 my-4"
           src={img2}
           alt=""
         />
@@ -30,7 +32,7 @@ const About = () => {
       <br />
       <div className="flex justify-between items-center flex-wrap">
         <Image
-          className="md:w-[30vw] w-[100%] border-4 order-last md:order-first md:my-0 my-4"
+          className="md:w-[30vw] w-[100%] order-last md:order-first md:my-0 my-4"
           src={img3}
           alt=""
         />
@@ -56,8 +58,11 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="flex relative right-0 items-center pt-8">
+        <span> Read Our Story</span>{" "}
+        <MoveRight strokeWidth={1.5} size={20} className="pt-1" />
+      </div>
     </div>
   );
 };
-
 export default About;
