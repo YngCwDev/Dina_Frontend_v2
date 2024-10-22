@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import c_data from "@/lib/c_data";
+import {c_data} from "@/lib/c_data";
 import Image from "next/image";
 import React from "react";
 import img from "@/assets/img-3.png";

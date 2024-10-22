@@ -1,4 +1,7 @@
-const data = {
+import img3 from "@/assets/img-3.png"
+const images = [img3, img3, img3,  img3,]
+
+const c_data = {
   categories: [
     {
       name: "Products",
@@ -66,7 +69,7 @@ const data = {
       items: [
         {
           name: "Heavy Machinery Rent",
-          link: "",
+          link: "/heavy_achinery_rent",
           sub_items: [
             "Excavators",
             "Bulldozers",
@@ -207,4 +210,4 @@ const data = {
   ],
 };
 
-export default data;
+export  {c_data, images};
