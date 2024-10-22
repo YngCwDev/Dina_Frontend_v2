@@ -20,8 +20,8 @@ const Discover = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -29,8 +29,8 @@ const Discover = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 2,
         },
       },
       {

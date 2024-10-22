@@ -104,8 +104,8 @@ const c_data = {
           sub_items_link: [""],
         },
         {
-          name: "Safety Training",
-          link: "",
+          name: "Safety Consulting and Training",
+          link: "/safety",
           sub_items: [
             "Workplace Safety",
             "Hazard Identification",

@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import img1 from "@/assets/img/hero2.png";
 import { c_data, images } from "@/lib/c_data";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
   return (
@@ -10,7 +12,7 @@ const Hero = () => {
         <Image src={img1} alt="" className="w-full" />
       </div>
       <div className="space-y-4 py-8">
-        <div className="px-[15vw] py-16 space-y-8">
+        <div className="px-[15vw] py-20 space-y-8">
           <h1 className="text-4xl text-red-700 font-bold">Our Services</h1>
           <p>
             Here’s a more detailed and polished version: We provide tailored
@@ -28,19 +30,21 @@ const Hero = () => {
           </p>
         </div>
         {/* NavServices */}
-        <div className="flex divide-x-2 justify-center py-8 font-semibold bg-zinc-100">
-          {c_data.categories[1].items.map((item, index) => {
-            if (index < 3) {
-              return (
-                <div
-                  key={item.name}
-                  className="px-16 hover:text-red-700 transition-colors duration-150"
-                >
-                  {item.name}
-                </div>
-              );
-            }
-          })}
+        <div>
+          <div className="flex divide-x-2 justify-center py-8 text-lg text-white font-semibold bg-zinc-950 ">
+            {c_data.categories[1].items.map((item, index) => {
+              if (index < 3) {
+                return (
+                  <div
+                    key={item.name}
+                    className="px-16 hover:text-red-700 transition-colors duration-150"
+                  >
+                    {item.name}
+                  </div>
+                );
+              }
+            })}
+          </div>
         </div>
       </div>
     </div>
