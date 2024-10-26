@@ -3,7 +3,7 @@ import Heavy from "@/sections/services/heavy";
 import React from "react";
 import Technical from "@/sections/services/technical";
 import Safety from "@/sections/services/safety";
-import Contact from "@/sections/services/contact";
+import Contact from "@/components/contact";
 
 const Services = () => {
   return (

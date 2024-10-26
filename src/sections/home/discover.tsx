@@ -20,8 +20,8 @@ const Discover = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -29,8 +29,8 @@ const Discover = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -53,11 +53,14 @@ const Discover = () => {
 
   return (
     <section className="bg-background py-12 md:py-16 relative">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between gap-6 mb-8 md:mb-12">
-          <h2 className="text-2xl pl-1 md:text-3xl font-bold text-foreground text-zinc-900 px-[30vw]">
-            Explore Our Comprehensive Range of Services Tailored to your Project
-          </h2>
+      <div className="container px-4 md:px-6">
+        <div className="space-y-4 my-8 flex flex-col items-center">
+          <div className="bg-red-700 h-1 max-w-16"></div>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-zinc-900">
+              Our Products
+            </h2>
+          </div>
         </div>
         <div className="relative">
           <Slider ref={sliderRef} {...settings}>
@@ -117,17 +120,15 @@ const ProductCard = ({
           <Image
             src={img3}
             alt={title}
-            width= {undefined}
+            width={undefined}
             fill
             className="object-cover transition-opacity duration-300 group-hover:opacity-80"
           />
           <div className="absolute inset-0 bg-zinc-950 opacity-10 transition-opacity duration-300 group-hover:opacity-40" />
         </div>
         <motion.div className="absolute  bg-gradient-to-t from-zinc-950 to-transparent bottom-0 left-0 right-0 p-4 z-10 flex flex-col items-start h-36">
-          <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">
-            {title}
-          </h3>
-          <p className="text-xs md:text-sm text-zinc-100">{description}</p>
+          <h3 className="text-lg md:text-xl font-bold text-white ">{title}</h3>
+          <p className="text-xs md:text-sm text-zinc-100 h-16">{description}</p>
           <Link
             href={link}
             className="flex gap-1 items-center text-white  text-xs md:text-sm"

@@ -1,14 +1,24 @@
-import ProductsContent from '@/sections/products/productsContent'
-import React from 'react'
+import Contact from "@/components/contact";
+import {
+  ProductsContent,
+  ProductsHero,
+} from "@/sections/products/productsContent";
+import React from "react";
 
 const Products = () => {
   return (
     <>
-        <section>
-            <ProductsContent/>
-        </section>
+      <section>
+        <ProductsHero />
+      </section>
+     {/*  <section>
+        <ProductsContent />
+      </section> */}
+      <section>
+        <Contact />
+      </section>
     </>
-)
-}
+  );
+};
 
-export default Products;    
+export default Products;

@@ -28,21 +28,19 @@ const Location = () => {
     const geocoder = new geocodingLibrary.Geocoder();
   }, [geocodingLibrary]);
   return (
-    <div className="bg-zinc-50 px-[20vw] py-[5vh]  border-b-zinc-200 border-b-[1px]">
+    <div className="px-4 bg-zinc-50 lg:px-[20vw] py-[5vh]  border-b-zinc-200 border-b-[1px] space-y-4">
       <div className=" flex flex-col items-center text-center gap-4">
         <h2 className="text-2xl font-bold text-red-700">
           Our Locations Across Mozambique
         </h2>
-        <p className="px-24">
+        <p className="lg:px-24">
           Empowering a wide range of sectors with customized solutions that
-          enhance productivity and safety. From mining and construction to
-          energy and healthcare. Our expertise and quality products are designed
-          to meet the unique challenges of each industry we support.
+          enhance productivity and safety.
         </p>
       </div>
       <div>
         <div>
-          <p className="pl-1 pb-2">Choose one location:</p>
+          <p className="pl-1 pb-2 text-sm">Choose one location:</p>
           <div className="flex">
             <Button
               variant={"ghost"}

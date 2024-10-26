@@ -3,12 +3,12 @@ import React from "react";
 import img2 from "@/assets/img-2.png";
 import img3 from "@/assets/img-3.png";
 import { MoveRight } from "lucide-react";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="bg-zinc-950/100   bg-cover bg-center bg-no-repeat w-full p-[2%]  md:px-[18%] px-4 text-white md:py-[2%] py-[10%]">
-      <div className="bg-white h-[10px] w-[60px]"></div>
+    <div className="bg-zinc-200 bg-cover bg-center bg-no-repeat w-full p-[2%]  md:px-[18%] px-4 text-zinc-900 md:py-[2%] py-[10%]">
+      <div className="bg-red-700 h-[10px] w-[60px]"></div>
       <div className="flex justify-between items-center flex-wrap">
         <div className="md:w-[45%]">
           <h2 className="text-[2rem] font-bold mb-8 md:mt-0 mt-4">
@@ -58,10 +58,10 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex relative right-0 items-center pt-8">
-        <span> Read Our Story</span>{" "}
-        <MoveRight strokeWidth={1.5} size={20} className="pt-1" />
-      </div>
+      <Link href="/about" className="flex relative right-0 items-center pt-8 transition-all duration-75 hover:font-semibold">
+        <span> Read Our Story</span>
+        <MoveRight strokeWidth={1.5} size={20} className="pt-1 hover:scale-x-150 duration-75" />
+      </Link>
     </div>
   );
 };
