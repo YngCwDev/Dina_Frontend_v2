@@ -3,15 +3,15 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { motion} from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { c_data } from "@/lib/c_data";
+import c_data from "@/lib/c_data";
 
 
 export const MobileMenu = ({
     openCategories,
     handleCategoryClick,
   }: {
-    openCategories: any;
-    handleCategoryClick: any;
+    openCategories: object;
+    handleCategoryClick: object;
   }) => {
     return (
       <motion.div

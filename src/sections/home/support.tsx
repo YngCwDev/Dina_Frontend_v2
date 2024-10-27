@@ -37,7 +37,7 @@ const Support = () => {
     </div>
   );
 };
-const Video = ({ className }: any) => {
+const Video = ({ className }: string) => {
   return (
     <>
       <video controls width={750} className={className} muted>

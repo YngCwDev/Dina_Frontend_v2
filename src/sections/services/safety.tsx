@@ -1,5 +1,5 @@
 import React from "react";
-import { c_data } from "@/lib/c_data";
+import c_data from "@/lib/c_data";
 import { TriangleAlert, ChevronRight, ShieldCheck, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

@@ -1,18 +1,9 @@
-import { Cable, HardHat, Truck } from "lucide-react";
+import { Cable, HardHat } from "lucide-react";
 import { TbCarCrane } from "react-icons/tb";
 import React from "react";
-import crane from "@/assets/Crane.png";
-import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 const Services = () => {
-  const Crane = () => {
-    return (
-      <>
-        <Image src={crane} width={20} alt="crane-icon" className="" />
-      </>
-    );
-  };
   const qualities = [
     {
       icon: TbCarCrane,
@@ -48,24 +39,27 @@ const Services = () => {
         </div>
         <div className="grid grid-cols-1 gap-8  sm:grid-cols-2 lg:grid-cols-3">
           {qualities.map((quality, index) => (
-               <Link href='/'>
-            <Card key={index} className="bg-white py-8 border-none drop-shadow-lg text-zinc-950 hover:scale-105 transition-all duration-150 ease-in-out">
-              <CardHeader>
-                <quality.icon
-                  className="w-12 h-12 text-red-700 mx-auto"
-                  aria-hidden="true"
-                />
-                <CardTitle className="text-center text-lg font-semibold text-zinc-950">
-                  {quality.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-sm text-zinc-900">
-                  {quality.description}
-                </p>
-             
-              </CardContent>
-            </Card>
+            <Link key={index} href="/">
+              <Card
+                key={index}
+                className="bg-white py-8 border-none drop-shadow-lg text-zinc-950 hover:scale-105 transition-all duration-150 ease-in-out"
+              >
+                <CardHeader>
+                  <quality.icon
+                    className="w-12 h-12 text-red-700 mx-auto"
+                    aria-hidden="true"
+                    key={index}
+                  />
+                  <CardTitle className="text-center text-lg font-semibold text-zinc-950">
+                    {quality.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-sm text-zinc-900">
+                    {quality.description}
+                  </p>
+                </CardContent>
+              </Card>
             </Link>
           ))}
         </div>

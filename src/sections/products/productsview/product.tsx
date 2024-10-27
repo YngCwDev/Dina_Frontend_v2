@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import img from "@/assets/img-2.png";
-import { c_data } from "@/lib/c_data";
-import { Button } from "@/components/ui/button";
+import c_data from "@/lib/c_data";
+import { CtaButton } from "@/components/cta_button";
 const products = c_data.categories[0].items;
 
 const Product = () => {
@@ -14,21 +13,21 @@ const Product = () => {
     setVisible(currentProduct);
   };
   return (
-    <div>
+    <div className="px-[10vw] py-[5vh] bg-white">
       {/* navsidebar */}
-      <div className="flex">
-        <ul className="block">
+      <div className="flex gap-4 bg-white divide-x">
+        <ul className="block divide-y">
           {products.map((product, index) => (
             <li
               key={product.name}
               onClick={() => handleClick(index)}
-              className="border-y-[1px] border-zinc-200 bg-white w-72 p-4 cursor-pointer hover:bg-zinc-100"
+              className=" bg-white w-72 p-4 cursor-pointer hover:bg-zinc-100"
             >
               {product.name}
             </li>
           ))}
         </ul>
-        <div>
+        <div className="px-8 py-4 bg-white">
           <Content productIndex={visibleProduct} />
         </div>
       </div>
@@ -36,29 +35,39 @@ const Product = () => {
   );
 };
 
-const Content = ({ productIndex }: any) => {
+const Content = ({ productIndex }: number) => {
   const product = products[productIndex];
   return (
-    <div>
-      <h2>{product.description}</h2>
+    <div className="space-y-4">
       <div>
-        <ul>
-          <li className="p-4 w-64">
-            <div className="md:h-[24vh] h-96  flex flex-col justify-between p-1">
-              <div className="relative w-full h-[20vh]">
-                <Image
-                  src={img}
-                  alt=""
-                  width={undefined}
-                  fill
-                  className="object-cover"
-                />
+        <h2>{product.description}</h2>
+      </div>
+      <div>
+        <ul className="flex flex-wrap gap-8">
+          {product.sub_items.map((productElement) => (
+            <li className="w-80 bg-white drop-shadow-xl rounded-md">
+              <div className="flex flex-col justify-between ">
+                <div className="w-full">
+                  <Image
+                    src={img}
+                    alt=""
+                    width={undefined}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative p-4 space-y-4">
+                  <h3 className="text-lg font-medium">{productElement}</h3>
+                  <p className="text-wrap text-sm">
+                    Enhanced performance with improved V8 Engine: At the heart
+                    of Node. js 22 lies a significantly upgraded V8 engine.
+                  </p>
+                  <div>
+                    <CtaButton />
+                  </div>
+                </div>
               </div>
-              <h3>xxxxxxxxxx</h3>
-              <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-              <Button>Contact Now</Button>
-            </div>
-          </li>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

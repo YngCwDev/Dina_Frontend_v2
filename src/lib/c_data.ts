@@ -1,10 +1,8 @@
-import img3 from "@/assets/img-3.png";
 import { GiMining } from "react-icons/gi";
-import { PiHardHatThin, PiTractorLight   } from "react-icons/pi";
+import { PiHardHatThin, PiTractorLight } from "react-icons/pi";
 import { TbCrane, TbCarCrane } from "react-icons/tb";
 import { GoLightBulb } from "react-icons/go";
-
-const images = [img3, img3, img3, img3];
+import img3 from "@/assets/img-3.png";
 
 const c_data = {
   categories: [
@@ -14,14 +12,14 @@ const c_data = {
       description:
         "High-quality industrial equipment and supplies for various sectors",
       icon: "ShoppingCart",
-      img: img3,
+      img: "",
       items: [
         {
           name: "Electrical Components",
           description:
             "Complete range of electrical solutions for industrial applications",
           icon: "Zap",
-          img: img3,
+          img: "",
           link: "/products/electrical",
           sub_items: [
             "Circuit Breakers",
@@ -48,7 +46,7 @@ const c_data = {
           name: "Generators and Batteries",
           description: "Reliable power solutions for continuous operation",
           icon: "Battery",
-          img: img3,
+          img: "",
           link: "/products/power",
           sub_items: [
             "Portable Generators",
@@ -75,7 +73,7 @@ const c_data = {
           name: "Personal Protective Equipment (PPE)",
           description: "Complete safety gear for workplace protection",
           icon: PiHardHatThin,
-          img: img3,
+          img: "",
           link: "/products/ppe",
           sub_items: [
             "Helmets",
@@ -102,7 +100,7 @@ const c_data = {
           name: "Oils and Lubricants",
           description: "High-performance lubricants for industrial machinery",
           icon: "Droplet",
-          img: img3,
+          img: "",
           link: "/products/oils",
           sub_items: [
             "Engine Oil",
@@ -129,7 +127,7 @@ const c_data = {
           name: "Spare Parts",
           description: "Genuine replacement parts for industrial equipment",
           icon: "Tool",
-          img: img3,
+          img: "",
           link: "/products/spare-parts",
           sub_items: [
             "Filters",
@@ -159,14 +157,14 @@ const c_data = {
       link: "/services",
       description: "Comprehensive industrial services and solutions",
       icon: "Settings",
-      img: img3,
+      img: "",
       items: [
         {
           name: "Heavy Machinery Rent",
           description:
             "Wide range of construction and mining equipment for rent",
           icon: "Truck",
-          img: img3,
+          img: "",
           link: "/services/machinery-rent",
           sub_items: [
             "Excavators",
@@ -193,7 +191,7 @@ const c_data = {
           name: "Technical Consulting",
           description: "Expert guidance for industrial operations",
           icon: "Briefcase",
-          img: img3,
+          img: "",
           link: "/services/consulting",
           sub_items: [
             "Project Assessment",
@@ -221,7 +219,7 @@ const c_data = {
           description:
             "Comprehensive maintenance services for industrial equipment",
           icon: "Tool",
-          img: img3,
+          img: "",
           link: "/services/maintenance",
           sub_items: [
             "Preventive Maintenance",
@@ -248,7 +246,7 @@ const c_data = {
           name: "Safety Consulting and Training",
           description: "Comprehensive safety solutions and training programs",
           icon: "Shield",
-          img: img3,
+          img: "",
           link: "/services/safety",
           sub_items: [
             "Workplace Safety",
@@ -275,7 +273,7 @@ const c_data = {
           name: "Customer Support",
           description: "24/7 comprehensive customer support services",
           icon: "HeadPhone",
-          img: img3,
+          img: "",
           link: "/services/support",
           sub_items: [
             "24/7 Assistance",
@@ -305,13 +303,13 @@ const c_data = {
       link: "/industries",
       description: "Specialized solutions for various industrial sectors",
       icon: "Industry",
-      img: img3,
+      img: "",
       items: [
         {
           name: "Mining",
           description: "Complete solutions for mining operations",
           icon: GiMining,
-          img: img3,
+          img: "",
           link: "/industries/mining",
           sub_items: [
             "Open-pit Mining",
@@ -338,7 +336,7 @@ const c_data = {
           name: "Construction",
           description: "Equipment and services for construction projects",
           icon: TbCrane,
-          img: img3,
+          img: "",
           link: "/industries/construction",
           sub_items: [
             "Civil Construction",
@@ -365,7 +363,7 @@ const c_data = {
           name: "Energy",
           description: "Solutions for power generation and distribution",
           icon: GoLightBulb,
-          img: img3,
+          img: "",
           link: "/industries/energy",
           sub_items: [
             "Power Generation",
@@ -392,7 +390,7 @@ const c_data = {
           name: "Heavy Machinery",
           description: "Solutions for manufacturing and processing",
           icon: TbCarCrane,
-          img: img3,
+          img: "",
           link: "/industries/heavy-industry",
           sub_items: [
             "Manufacturing",
@@ -418,8 +416,8 @@ const c_data = {
         {
           name: "Agriculture",
           description: "Equipment and solutions for agricultural operations",
-          icon: PiTractorLight ,
-          img: img3,
+          icon: PiTractorLight,
+          img: "",
           link: "/industries/agriculture",
           sub_items: [
             "Farm Equipment",
@@ -447,7 +445,7 @@ const c_data = {
           description:
             "Safety and security solutions for industrial environments",
           icon: PiHardHatThin,
-          img: img3,
+          img: "",
           link: "/industries/protection",
           sub_items: [
             "Security Systems",
@@ -475,4 +473,4 @@ const c_data = {
   ],
 };
 
-export { c_data, images };
+export default c_data;

@@ -2,8 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import img1 from "@/assets/img/hero2.png";
-import { c_data, images } from "@/lib/c_data";
-import { useState, useEffect } from "react";
+import  c_data  from "@/lib/c_data";
 
 const Hero = () => {
   return (

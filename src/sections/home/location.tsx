@@ -25,7 +25,6 @@ const Location = () => {
   useEffect(() => {
     if (!geocodingLibrary) return;
 
-    const geocoder = new geocodingLibrary.Geocoder();
   }, [geocodingLibrary]);
   return (
     <div className="px-4 bg-zinc-50 lg:px-[20vw] py-[5vh]  border-b-zinc-200 border-b-[1px] space-y-4">

@@ -1,7 +1,5 @@
-import Industries from "@/app/industries/page";
-import CallToAction from "@/components/cta";
-import { c_data } from "@/lib/c_data";
-import { ChevronRight, ChevronsLeftRight, ChevronUpCircle } from "lucide-react";
+import c_data from "@/lib/c_data";
+import {ChevronRight} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -25,11 +23,12 @@ const IndustryList = () => {
         {c_data.categories.map((category) => {
           if (category.name === "Industries") {
             return category.items.map((industry) => (
-              <div className="w-80 flex flex-col items-center gap-4 shadow-md rounded-md text-center bg-white border-zinc-200 border-[1px] p-8">
+              <div key={industry.name} className="w-80 flex flex-col items-center gap-4 shadow-md rounded-md text-center bg-white border-zinc-200 border-[1px] p-8">
                 <industry.icon
                   size={100}
                   strokeWidth={1}
                   className="text-red-700 mx-auto"
+                  key={industry.name}
                 />
                 <div className="space-y-2">
                   <h3 className="text-lg font-semibold">{industry.name}</h3>

@@ -1,5 +1,4 @@
 import { CircleUser } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 
 const QuoteMassage = () => {
@@ -11,8 +10,8 @@ const QuoteMassage = () => {
         <h2 className="font-semibold text-2xl">General manager</h2>
         </div>
         <p className="text-2xl">
-          "Stay focused on safety and efficiency. With the right tools and
-          determination, every challenge becomes an opportunity for success."
+        &quot;Stay focused on safety and efficiency. With the right tools and
+          determination, every challenge becomes an opportunity for success.&quot;
         </p>
       </div>
     </div>

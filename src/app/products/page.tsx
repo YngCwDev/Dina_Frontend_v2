@@ -1,8 +1,7 @@
 import Contact from "@/components/contact";
-import {
-  ProductsContent,
-  ProductsHero,
-} from "@/sections/products/productsContent";
+import { ProductsHero } from "@/sections/products/productsContent";
+import Product from "@/sections/products/productsview/product";
+
 import React from "react";
 
 const Products = () => {
@@ -11,9 +10,9 @@ const Products = () => {
       <section>
         <ProductsHero />
       </section>
-     {/*  <section>
-        <ProductsContent />
-      </section> */}
+      <section>
+        <Product />
+      </section>
       <section>
         <Contact />
       </section>

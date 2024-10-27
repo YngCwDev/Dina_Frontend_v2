@@ -26,7 +26,7 @@ const Hero = () => {
     </div>
   );
 };
-const Video = ({ className }: any) => {
+const Video = ({ className }: string) => {
   return (
     <>
       <video loop autoPlay className={className} muted>

@@ -8,16 +8,17 @@ import {
 } from "lucide-react";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { c_data, images } from "@/lib/c_data";
+import c_data from "@/lib/c_data";
 import img1 from "@/assets/img-2.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { images } from "@/lib/images";
 
 const Heavy = () => {
-  var settings = {
+  const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -79,7 +80,7 @@ const Heavy = () => {
               <div className="bg-red-700 h-1 w-[6vw]"></div>
             </div>{" "}
             <p>
-              We provide a wide selection of machinery to support your project's
+              We provide a wide selection of machinery to support your project&apos;s
               demands, from excavators and bulldozers to cranes and loaders.
               Each piece of equipment undergoes rigorous maintenance and
               inspections to ensure top performance and safety standards.
@@ -126,7 +127,7 @@ const Heavy = () => {
   );
 };
 
-const Slide = ({item}) => {
+const Slide = ({item}: StaticImageData) => {
   return (
     <div className="w-[320px]">
       <Image src={item} alt="" />

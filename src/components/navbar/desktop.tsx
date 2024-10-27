@@ -2,15 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { motion} from "framer-motion";
-import { c_data } from "@/lib/c_data";
+import c_data from "@/lib/c_data";
 
 
 export const DesktopMenu = ({
     handleHover,
     openCategories,
   }: {
-    handleHover: any;
-    openCategories: any;
+    handleHover: string;
+    openCategories: string;
   }) => {
     return (
       <>
@@ -56,13 +56,13 @@ export const DesktopMenu = ({
                         <ul className="flex gap-8 text-[14px]  justify-center">
                           {category.items.map((items) => {
                             return (
-                              <div>
+                              <div key={items.name}>
                                 <h1 className="font-semibold text-zinc-950 text-[16px] p-2">
                                   {items.name}
                                 </h1>
                                 {items.sub_items.map((sub_item) => {
                                   return (
-                                    <li className="p-2 hover:font-semibold">
+                                    <li key={sub_item} className="p-2 hover:font-semibold">
                                       <Link href={sub_item}>{sub_item}</Link>
                                     </li>
                                   );

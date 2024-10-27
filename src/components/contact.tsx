@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { c_data } from "@/lib/c_data";
+import c_data from "@/lib/c_data";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import LOGO from "@/assets/LOGO-w.svg";
-import { MobileIcon } from "@radix-ui/react-icons";
 
 const footerSections = [
   {
@@ -89,7 +88,7 @@ const DesktopFooter = () => {
               </nav>
             </div>
 
-            {footerSections.slice(1).map((section, index) => (
+            {footerSections.slice(1).map((section) => (
               <div key={section.title} className="flex flex-col">
                 <nav aria-label={`${section.title.toLowerCase()} links`}>
                   <h2 className="mb-4 text-lg font-bold">{section.title}</h2>

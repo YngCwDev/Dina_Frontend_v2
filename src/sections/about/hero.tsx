@@ -24,16 +24,16 @@ const Hero = () => {
 
       <div>
         <div className="bg-zinc-950 bg-opacity-10 w-full"></div>
-        <Video className="w-screen md:min-h-none min-h-screen  object-cover  top-0 left-0 fixed -z-20" />
+        <Video classname="w-screen md:min-h-none min-h-screen  object-cover  top-0 left-0 fixed -z-20" />
       </div>
     </div>
   );
 };
 
-const Video = ({ className }: any) => {
+const Video = ({ classname }: string) => {
   return (
     <>
-      <video loop autoPlay className={className} muted>
+      <video loop autoPlay className={classname} muted>
         <source src={"/videos/mining.mp4"} type="video/mp4" />
       </video>
     </>

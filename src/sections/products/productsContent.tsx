@@ -1,12 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { c_data } from "@/lib/c_data";
+import c_data from "@/lib/c_data";
 import Image from "next/image";
 import React, { useState } from "react";
 import img from "@/assets/img-3.png";
 import { ChevronRight } from "lucide-react";
-
 
 const ProductsHero = () => {
   return (
@@ -33,12 +32,12 @@ const ProductsHero = () => {
   );
 };
 
-const ProductsContent = () => {
+/* const ProductsContent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openCat, setOpenCat] = useState({});
   const handleCat = (CatName: string) => {
     setIsOpen(!isOpen);
-    setOpenCat((prev: any) => ({
+    setOpenCat((prev: object) => ({
       ...prev,
       [CatName]: !prev[CatName],
     }));
@@ -54,7 +53,7 @@ const ProductsContent = () => {
                 key={catItem.name}
                 className="px-[15vw]  py-2 flex flex-col justify-center"
               >
-                {/* header */}
+                // header
 
                 <div
                   className="text-zinc-950 cursor-pointer border-b border-red-700"
@@ -79,7 +78,7 @@ const ProductsContent = () => {
                     </div>
                   </div>
                 </div>
-                {/* the flex */}
+                // the flex 
                 {openCat[catItem.name] && (
                   <div className="my-8">
                     <div className="flex flex-wrap gap-8">
@@ -121,21 +120,22 @@ const ProductsContent = () => {
       })}
     </div>
   );
-};
+}; */
 
 const ProductsNav = () => {
   return (
-    <div className="flex justify-center divide-x-2 divide-zinc-400 bg-zinc-200 text-white p-[1vw]">
-      {c_data.categories[0].items.map((item) => (
+    <div className="flex justify-center divide-x-2 divide-zinc-400 bg-zinc-200 text-zinc-900 p-[1vw]">
+      <h3 className="text-2xl">Explore Our Products</h3>
+      {/*   {c_data.categories[0].items.map((item) => (
         <div
           key={item.name}
           className="p-2 px-4 text-lg text-zinc-950 font-medium hover:text-red-600/100 transition-colors duration-150"
         >
           {item.name}
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
 
-export { ProductsContent, ProductsHero };
+export { ProductsHero };

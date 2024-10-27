@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import grid from "@/lib/discover";
 import img3 from "@/assets/img-3.png";
 import Slider from "react-slick";
