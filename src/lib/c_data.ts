@@ -2,7 +2,6 @@ import { GiMining } from "react-icons/gi";
 import { PiHardHatThin, PiTractorLight } from "react-icons/pi";
 import { TbCrane, TbCarCrane } from "react-icons/tb";
 import { GoLightBulb } from "react-icons/go";
-import img3 from "@/assets/img-3.png";
 
 const c_data = {
   categories: [
@@ -11,14 +10,14 @@ const c_data = {
       link: "/products",
       description:
         "High-quality industrial equipment and supplies for various sectors",
-      icon: "ShoppingCart",
+      icon: "",
       img: "",
       items: [
         {
           name: "Electrical Components",
           description:
             "Complete range of electrical solutions for industrial applications",
-          icon: "Zap",
+          icon: "",
           img: "",
           link: "/products/electrical",
           sub_items: [
@@ -45,7 +44,7 @@ const c_data = {
         {
           name: "Generators and Batteries",
           description: "Reliable power solutions for continuous operation",
-          icon: "Battery",
+          icon: "",
           img: "",
           link: "/products/power",
           sub_items: [
@@ -99,7 +98,7 @@ const c_data = {
         {
           name: "Oils and Lubricants",
           description: "High-performance lubricants for industrial machinery",
-          icon: "Droplet",
+          icon: "",
           img: "",
           link: "/products/oils",
           sub_items: [
@@ -126,7 +125,7 @@ const c_data = {
         {
           name: "Spare Parts",
           description: "Genuine replacement parts for industrial equipment",
-          icon: "Tool",
+          icon: "",
           img: "",
           link: "/products/spare-parts",
           sub_items: [
@@ -156,14 +155,14 @@ const c_data = {
       name: "Services",
       link: "/services",
       description: "Comprehensive industrial services and solutions",
-      icon: "Settings",
+      icon: "",
       img: "",
       items: [
         {
           name: "Heavy Machinery Rent",
           description:
             "Wide range of construction and mining equipment for rent",
-          icon: "Truck",
+          icon: "",
           img: "",
           link: "/services/machinery-rent",
           sub_items: [
@@ -190,7 +189,7 @@ const c_data = {
         {
           name: "Technical Consulting",
           description: "Expert guidance for industrial operations",
-          icon: "Briefcase",
+          icon: "",
           img: "",
           link: "/services/consulting",
           sub_items: [
@@ -218,7 +217,7 @@ const c_data = {
           name: "Equipment Maintenance",
           description:
             "Comprehensive maintenance services for industrial equipment",
-          icon: "Tool",
+          icon: "",
           img: "",
           link: "/services/maintenance",
           sub_items: [
@@ -245,7 +244,7 @@ const c_data = {
         {
           name: "Safety Consulting and Training",
           description: "Comprehensive safety solutions and training programs",
-          icon: "Shield",
+          icon: "",
           img: "",
           link: "/services/safety",
           sub_items: [
@@ -272,7 +271,7 @@ const c_data = {
         {
           name: "Customer Support",
           description: "24/7 comprehensive customer support services",
-          icon: "HeadPhone",
+          icon: "",
           img: "",
           link: "/services/support",
           sub_items: [
@@ -302,7 +301,7 @@ const c_data = {
       name: "Industries",
       link: "/industries",
       description: "Specialized solutions for various industrial sectors",
-      icon: "Industry",
+      icon: "",
       img: "",
       items: [
         {

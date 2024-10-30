@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "@/assets/img-2.png";
+import img1 from "./../../../public/img-2.png";
 import Image from "next/image";
 import c_data from "@/lib/c_data";
 import { MdOutlineSupportAgent } from "react-icons/md";

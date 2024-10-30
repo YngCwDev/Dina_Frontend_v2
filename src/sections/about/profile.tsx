@@ -1,6 +1,6 @@
 import React from 'react'
-import img2 from '@/assets/img-2.png'
-import img3 from '@/assets/img-3.png'
+import img2 from './../../../public/img-2.png'
+import img3 from './../../../public/img-3.png'
 import Image from 'next/image'
 
 const Profile = () => {

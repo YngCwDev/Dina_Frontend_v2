@@ -1,4 +1,4 @@
-import img3 from "@/assets/img-3.png";
+import img3 from "./../../public/img-3.png";
 const grid = [
   {
     src: img3,

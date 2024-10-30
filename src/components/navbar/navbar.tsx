@@ -6,10 +6,11 @@ import Link from "next/link";
 import { Search, Globe, Menu, X } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/LOGO.svg";
+import logo from "./../../../public/LOGO.svg";
 import { DesktopMenu } from "./desktop";
 import { MobileMenu } from "./mobile";
 import { Banner } from "./banner";
+
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -24,7 +25,6 @@ const Navbar = () => {
       [category]: !prev[category],
     }));
   };
-
   return (
     <header className="relative bg-white z-10 ">
       <Banner />

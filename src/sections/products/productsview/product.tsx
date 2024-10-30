@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import img from "@/assets/img-2.png";
+import img from "./../../../../public/img-2.png";
 import c_data from "@/lib/c_data";
 import { CtaButton } from "@/components/cta_button";
 const products = c_data.categories[0].items;
@@ -10,7 +10,7 @@ const products = c_data.categories[0].items;
 const Product = () => {
   const [visibleProduct, setVisible] = useState(0);
   const handleClick = (currentProduct: number) => {
-    setVisible(currentProduct);
+    setVisible(currentProduct); 
   };
   return (
     <div className="px-[10vw] py-[5vh] bg-white">
@@ -45,7 +45,7 @@ const Content = ({ productIndex }: number) => {
       <div>
         <ul className="flex flex-wrap gap-8">
           {product.sub_items.map((productElement) => (
-            <li className="w-80 bg-white drop-shadow-xl rounded-md">
+            <li key={productElement} className="w-80 bg-white drop-shadow-xl rounded-md">
               <div className="flex flex-col justify-between ">
                 <div className="w-full">
                   <Image

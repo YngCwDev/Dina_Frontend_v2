@@ -9,7 +9,7 @@ import {
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import c_data from "@/lib/c_data";
-import img1 from "@/assets/img-2.png";
+import img1 from "./../../../public/img-2.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Slider from "react-slick";

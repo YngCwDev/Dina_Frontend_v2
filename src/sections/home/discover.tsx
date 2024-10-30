@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import grid from "@/lib/discover";
-import img3 from "@/assets/img-3.png";
+import img3 from "./../../../public/img-3.png";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "slick-carousel/slick/slick.css";

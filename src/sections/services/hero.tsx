@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import img1 from "@/assets/img/hero2.png";
+import img1 from "./../../../public/img/hero2.png";
 import  c_data  from "@/lib/c_data";
 
 const Hero = () => {

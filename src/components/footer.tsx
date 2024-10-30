@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import LOGO from "@/assets/LOGO-w.svg";
+import LOGO from "./../../public/LOGO-w.svg";
 
 const footerSections = [
   {

@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Hero from "@/sections/about/hero";
 import Profile from "@/sections/about/profile";
 import Qualities from "@/sections/about/qualities";
