@@ -17,7 +17,7 @@ const Hero = () => {
             safety.
           </p>
           <div>
-            <CtaButton />
+            <CtaButton classname=""/>
           </div>
         </div>
       </div>

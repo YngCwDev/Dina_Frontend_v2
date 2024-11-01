@@ -1,13 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import {
-  APIProvider,
-  Map,
-  AdvancedMarker,
-  useMapsLibrary,
-} from "@vis.gl/react-google-maps";
+import MapLocation from "@/components/map";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Location = () => {
   const Maputo = { lat: -25.969268, lng: 32.573176 };
@@ -21,11 +16,6 @@ const Location = () => {
       setPosition(Tete);
     }
   };
-  const geocodingLibrary = useMapsLibrary("geocoding");
-  useEffect(() => {
-    if (!geocodingLibrary) return;
-
-  }, [geocodingLibrary]);
   return (
     <div className="px-4 bg-zinc-50 lg:px-[20vw] py-[5vh]  border-b-zinc-200 border-b-[1px] space-y-4">
       <div className=" flex flex-col items-center text-center gap-4">
@@ -57,18 +47,7 @@ const Location = () => {
             </Button>
           </div>
         </div>
-        <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY}>
-          <div className="h-[50vh]">
-            <Map
-              defaultCenter={currentPosition}
-              defaultZoom={10}
-              mapId={process.env.MAP_ID}
-              center={currentPosition}
-            >
-              <AdvancedMarker position={currentPosition} />
-            </Map>
-          </div>
-        </APIProvider>
+       <MapLocation current={currentPosition} classname='' />
       </div>
     </div>
   );

@@ -10,8 +10,8 @@ export const MobileMenu = ({
     openCategories,
     handleCategoryClick,
   }: {
-    openCategories: object;
-    handleCategoryClick: object;
+    openCategories: { [key: string]: boolean };
+    handleCategoryClick: (category: string) => void;
   }) => {
     return (
       <motion.div

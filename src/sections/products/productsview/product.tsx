@@ -7,6 +7,10 @@ import c_data from "@/lib/c_data";
 import { CtaButton } from "@/components/cta_button";
 const products = c_data.categories[0].items;
 
+interface Index{
+  productIndex: number
+}
+
 const Product = () => {
   const [visibleProduct, setVisible] = useState(0);
   const handleClick = (currentProduct: number) => {
@@ -35,7 +39,7 @@ const Product = () => {
   );
 };
 
-const Content = ({ productIndex }: number) => {
+const Content = ({ productIndex }: Index) => {
   const product = products[productIndex];
   return (
     <div className="space-y-4">
@@ -62,7 +66,7 @@ const Content = ({ productIndex }: number) => {
                     of Node. js 22 lies a significantly upgraded V8 engine.
                   </p>
                   <div>
-                    <CtaButton />
+                    <CtaButton classname="" />
                   </div>
                 </div>
               </div>

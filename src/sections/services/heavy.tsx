@@ -17,6 +17,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { images } from "@/lib/images";
 
+
+interface Item{
+  item: StaticImageData
+}
+
 const Heavy = () => {
   const settings = {
     infinite: true,
@@ -127,7 +132,7 @@ const Heavy = () => {
   );
 };
 
-const Slide = ({item}: StaticImageData) => {
+const Slide = ({item}: Item) => {
   return (
     <div className="w-[320px]">
       <Image src={item} alt="" />

@@ -14,7 +14,7 @@ import Location from "@/sections/home/location";
 
 const Page = () => {
   return (
-    <main>
+    <>
       <section>
         <Hero />
       </section>
@@ -49,7 +49,7 @@ const Page = () => {
       <section>
         <Contact/>
       </section>
-    </main>
+    </>
   );
 };
 

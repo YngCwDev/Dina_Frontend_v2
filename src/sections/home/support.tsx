@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
+
+interface VideoProps{
+  className: string
+}
+
 const Support = () => {
   return (
     <div className="bg-home-support bg-zinc-100 md:px-[10vw] lg:py-[16vh]  py-[5vh] md:tex bg-no-repeat flex justify-center px-4 ">
@@ -37,7 +42,7 @@ const Support = () => {
     </div>
   );
 };
-const Video = ({ className }: string) => {
+const Video = ({ className }: VideoProps) => {
   return (
     <>
       <video controls width={750} className={className} muted>

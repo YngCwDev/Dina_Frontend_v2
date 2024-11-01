@@ -1,5 +1,9 @@
 import React from "react";
 
+interface VideoProps{
+  className: string
+}
+
 const Hero = () => {
   return (
     <div>
@@ -26,7 +30,7 @@ const Hero = () => {
     </div>
   );
 };
-const Video = ({ className }: string) => {
+const Video = ({ className }: VideoProps) => {
   return (
     <>
       <video loop autoPlay className={className} muted>

@@ -12,7 +12,7 @@ const CallToAction = () => {
             request a quote, reach out to us.
           </p>
         </div>
-        <CtaButton />
+        <CtaButton classname="" />
       </div>
     </div>
   );

@@ -4,15 +4,15 @@ import { CircleUser } from "lucide-react";
 
 export const Banner = () => {
   return (
-    <div className="hidden bg-red-800 p-1 text-white md:block">
+    <div className="hidden bg-red-700 p-1 text-white md:block">
       <div className="container mx-auto flex justify-between px-4 md:px-20">
         <nav>
           <ul className="flex gap-4">
             <li>
-              <Link href="#">Locations</Link>
+              <Link href='/support'>Locations</Link>
             </li>
             <li>
-              <Link href="#">Offices</Link>
+              <Link href="/support">Offices</Link>
             </li>
             <li>
               <Link href="#">Careers</Link>
