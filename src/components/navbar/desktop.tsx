@@ -20,12 +20,12 @@ export const DesktopMenu = ({
           <li
             onMouseEnter={() => handleHover(products.name)}
             onMouseLeave={() => handleHover(products.name)}
-            className="py-4 px-4 border-b-zinc-950 hover:bg-zinc-100"
+            className="border-b-zinc-950  hover:bg-zinc-100"
             key={products.name}
           >
             <Link
               href={products.link}
-              className="font-normal px-4 flex items-center gap-[2px]"
+              className=" p-4 flex items-center gap-[2px]"
             >
               {products.name}
               <ChevronDown
@@ -41,7 +41,7 @@ export const DesktopMenu = ({
             {openCategories[products.name] && (
               /* SubNav list categories - viewport */
               <motion.div
-                className=" flex justify-center gap-36 py-16 w-full absolute drop-shadow-md left-0 mt-4
+                className=" flex justify-center gap-36 py-16 w-full absolute drop-shadow-md left-0 
                    bg-white -z-10"
                 initial={{ opacity: 0, translateY: -20 }}
                 animate={{ opacity: 1, translateY: 0 }}
@@ -52,14 +52,14 @@ export const DesktopMenu = ({
                   {products.items.map((items) => {
                     return (
                       <div key={items.name}>
-                        <h1 className=" font-semibold text-zinc-950 text-[16px] p-2">
+                        <h1 className="font-medium text-zinc-950 text-[16px] p-2">
                           {items.name}
                         </h1>
                         {items.sub_items.map((sub_item) => {
                           return (
                             <li
                               key={sub_item}
-                              className="p-2 hover:font-mediun"
+                              className="p-2  hover:font-medium"
                             >
                               <Link href={sub_item}>{sub_item}</Link>
                             </li>
@@ -72,14 +72,14 @@ export const DesktopMenu = ({
               </motion.div>
             )}
           </li>
-          <li className="py-4 px-8 font-normal hover:bg-zinc-100">
-            <Link href="/services">Services</Link>
+          <li className=" hover:bg-zinc-100 flex items-center">
+            <Link href="/services" className="py-4 px-8">Services</Link>
           </li>
-          <li className="py-4 px-8 font-normal hover:bg-zinc-100">
-            <Link href="/industries ">Industries</Link>
+          <li className=" hover:bg-zinc-100 flex items-center">
+            <Link href="/industries " className="py-4 px-8">Industries</Link>
           </li>
-          <li className="py-4 px-8 font-normal hover:bg-zinc-100">
-            <Link href="/about">About</Link>
+          <li className=" hover:bg-zinc-100 flex items-center">
+            <Link href="/about" className="py-4 px-8">About</Link>
           </li>
         </ul>
       </nav>

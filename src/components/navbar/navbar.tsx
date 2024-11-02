@@ -4,16 +4,18 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Globe, Menu, X, Phone } from "lucide-react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logo from "./../../../public/LOGO.svg";
 import { DesktopMenu } from "./desktop";
 import { MobileMenu } from "./mobile";
 import { Banner } from "./banner";
+import Language from "./language";
 
 interface OpenCategories {
   [key: string]: boolean;
 }
+
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [openCategories, setOpenCategories] = useState({});
@@ -46,11 +48,26 @@ const Navbar = () => {
           <Button variant="ghost" aria-label="Search">
             <Search className="h-6 w-6" />
           </Button>
-          <Button variant="ghost" aria-label="Language">
+          <Button
+            variant="ghost"
+            aria-label="Language"
+            className="relative gap-4"
+            onMouseEnter={() => handleHover("language")}
+            onMouseLeave={() => handleHover("language")}
+          >
             <Globe className="h-6 w-6" />
+            { openCategories["language"] &&  (
+              <motion.div className="absolute pt-10 top-6" initial={{opacity:0, translateY:-5 }} animate={{opacity:1, translateY:0}} transition={{duration: 0.2}}>
+                <Language />
+              </motion.div>
+            )}
           </Button>
           <Link href="/support">
-            <Button variant="outline" className="divide-x gap-2"><span>Contact</span><Phone size={20} strokeWidth={1}/></Button>
+            <Button variant="outline" className="bg-zinc-800 text-white">
+              <span>Call Now</span>
+              <div className="w-[2px] mx-2 bg-zinc-200 h-4"></div>
+              <Phone size={18} strokeWidth={1.8} />
+            </Button>
           </Link>
         </div>
         <Button

@@ -5,7 +5,7 @@ import { CircleUser } from "lucide-react";
 export const Banner = () => {
   return (
     <div className="hidden bg-red-700 p-1 text-white md:block">
-      <div className="container mx-auto flex justify-between px-4 md:px-20">
+      <div className="px-[10vw] mx-auto flex justify-between  md:px-20">
         <nav>
           <ul className="flex gap-4">
             <li>
