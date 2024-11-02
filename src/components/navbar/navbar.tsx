@@ -11,6 +11,7 @@ import { DesktopMenu } from "./desktop";
 import { MobileMenu } from "./mobile";
 import { Banner } from "./banner";
 import Language from "./language";
+import SearchBar from "./search";
 
 interface OpenCategories {
   [key: string]: boolean;
@@ -18,10 +19,14 @@ interface OpenCategories {
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const [search, setSearch] = useState(false);
   const [openCategories, setOpenCategories] = useState({});
 
   const handleClick = () => {
     setOpen(!isOpen);
+  };
+  const handleSearchClick = () => {
+    setSearch(!search);
   };
   const handleHover = (category: string) => {
     setOpenCategories((prev: OpenCategories) => ({
@@ -45,8 +50,15 @@ const Navbar = () => {
           </AnimatePresence>
         </div>
         <div className="hidden gap-2 md:flex">
-          <Button variant="ghost" aria-label="Search">
-            <Search className="h-6 w-6" />
+          <Button variant="ghost" aria-label="Search" className="relative px-0"
+          
+          >
+            <Search className="h-6 w-6 mx-2" onClick={handleSearchClick}/>
+            { search &&   (
+              <motion.div className="absolute z-10 right-0" initial={{opacity:0, translateX:5 }} animate={{opacity:1, translateX:0}} transition={{duration: 0.2}}>
+                <SearchBar handleSearchClick={handleSearchClick}/>
+              </motion.div>
+            )}
           </Button>
           <Button
             variant="ghost"
