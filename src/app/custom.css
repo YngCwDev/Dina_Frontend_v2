@@ -1,0 +1,25 @@
+.bg-hero{
+    background-image: url('./../../public/bg-1.png');
+}
+
+.bg-home-hero{
+    background-image: url('./../../public/img/home-hero.png');
+}
+
+.bg-home-support{
+    background-image: url('./../../public/img/support-dina.png');
+}
+
+.bg-grid{
+    background-image: url('./../../public/img-3.png');
+}
+
+.bg-about{
+    background-image: url('./../../public/bgimg-2.jpg');
+}
+
+/* Products page */
+
+.bg-electrical{
+    background-image: url('./../../public/products/electrical.png');
+}

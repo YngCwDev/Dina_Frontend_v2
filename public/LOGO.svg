@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.94 102.66">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .08em;
+      }
+
+      .cls-2 {
+        letter-spacing: .06em;
+      }
+
+      .cls-3 {
+        letter-spacing: .08em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: .06em;
+      }
+
+      .cls-6 {
+        font-size: 23.04px;
+      }
+
+      .cls-6, .cls-7 {
+        font-family: Brutel-Bold, Brutel;
+        font-weight: 700;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        fill: #04040f;
+      }
+
+      .cls-7 {
+        font-size: 8.34px;
+      }
+
+      .cls-9 {
+        letter-spacing: .07em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-8 {
+        font-family: Brutel-Black, Brutel;
+        font-size: 43.34px;
+        font-weight: 800;
+      }
+
+      .cls-11 {
+        fill: #b91c1c;
+        stroke-width: 0px;
+      }
+
+      .cls-12 {
+        letter-spacing: .07em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <polygon class="cls-11" points="53.62 93.05 29 102.66 29.45 0 53.92 12.61 53.62 93.05"/>
+        <polygon class="cls-11" points="84.39 81.16 59.77 88.03 60.22 14.63 84.69 23.65 84.39 81.16"/>
+        <polygon class="cls-11" points=".3 81.16 24.91 88.03 24.46 14.63 0 23.65 .3 81.16"/>
+      </g>
+      <g>
+        <g>
+          <text class="cls-8" transform="translate(86.78 53.47) scale(1.02 1)"><tspan x="0" y="0">DINA</tspan></text>
+          <text class="cls-6" transform="translate(88.47 73.07) scale(1.02 1)"><tspan class="cls-10" x="0" y="0">HOLDING </tspan><tspan class="cls-4" x="104.08" y="0">S</tspan><tspan class="cls-10" x="116.96" y="0">A</tspan></text>
+        </g>
+        <text class="cls-7" transform="translate(89.82 83.98)"><tspan class="cls-3" x="0" y="0">EL</tspan><tspan class="cls-5" x="9.84" y="0">E</tspan><tspan class="cls-3" x="14.94" y="0">CTRICAL </tspan><tspan class="cls-5" x="55.44" y="0">E</tspan><tspan class="cls-1" x="60.54" y="0">QUI</tspan><tspan class="cls-2" x="76.61" y="0">P</tspan><tspan class="cls-1" x="82.29" y="0">MENT &amp; SE</tspan><tspan class="cls-9" x="130.35" y="0">R</tspan><tspan class="cls-1" x="136.04" y="0">VIC</tspan><tspan class="cls-12" x="150.63" y="0">E</tspan><tspan class="cls-1" x="155.81" y="0" xml:space="preserve">S  </tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
