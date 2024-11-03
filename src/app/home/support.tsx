@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
@@ -21,23 +21,21 @@ const Support = () => {
             energy and healthcare. <br /> Our expertise and quality products are
             designed to meet the unique challenges of each industry we support.
           </p>
-          <Button
-            variant={"ghost"}
-            className="bg-red-700 text-white lg:flex hidden"
+          <div
+            className="lg:flex hidden"
           >
-            <Link href="/services">Explore More</Link>
-          </Button>
+            <Link href="/services" className={buttonVariants({variant: 'red'})}>Explore More</Link>
+          </div>
         </div>
         <div>
           <Video className="border-none" />
         </div>
 
-        <Button
-          variant={"ghost"}
-          className="bg-red-700 text-white lg:hidden w-full"
-        >
-          <Link href="/services">Explore More</Link>
-        </Button>
+        <div
+            className="lg:hidden w-full"
+          >
+            <Link href="/services" className={buttonVariants({variant: 'red'})}>Explore More</Link>
+          </div>
       </div>
     </div>
   );

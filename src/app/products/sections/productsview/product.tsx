@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import img from "./../../../../public/img-2.png";
+import img from "./../../../../../public/img/img-2.png";
 import c_data from "@/lib/c_data";
-import { CtaButton } from "@/components/cta_button";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 const products = c_data.categories[0].items;
 
 interface Index{
@@ -62,11 +63,11 @@ const Content = ({ productIndex }: Index) => {
                 <div className="relative p-4 space-y-4">
                   <h3 className="text-lg font-medium">{productElement}</h3>
                   <p className="text-wrap text-sm">
-                    Enhanced performance with improved V8 Engine: At the heart
-                    of Node. js 22 lies a significantly upgraded V8 engine.
+                      I will say something later
                   </p>
-                  <div>
-                    <CtaButton classname="" />
+                  <div className="flex justify-between items-center">
+                    <Link href='/support' className={buttonVariants({ variant: "outline" })}>Contact Now</Link>
+                    <Link href='/products/productsview'>See more</Link>
                   </div>
                 </div>
               </div>

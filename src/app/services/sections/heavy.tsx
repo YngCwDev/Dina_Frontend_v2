@@ -4,18 +4,16 @@ import {
   ShieldCheck,
   SearchCheck,
   Handshake,
-  ChevronRight,
 } from "lucide-react";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import c_data from "@/lib/c_data";
-import img1 from "./../../../public/img-2.png";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import img1 from "./../../../../public/img/img-2.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { images } from "@/lib/images";
+import { CtaButton } from "@/components/cta_button";
 
 
 interface Item{
@@ -99,19 +97,7 @@ const Heavy = () => {
               ))}
             </div>
             <div className="flex   gap-2 items-center   bg-zinc-200 rounded-xl w-fit">
-              <Button
-                variant={"ghost"}
-                className="bg-red-700 text-white rounded-xl"
-              >
-                Contact Now
-              </Button>
-              <Link
-                href={c_data.categories[1].items[3].link}
-                className="flex items-center "
-              >
-                <span className="font-medium">Request a Quote</span>
-                <ChevronRight size={20} strokeWidth={1} />
-              </Link>
+              <CtaButton classname=""/>
             </div>
           </div>
           <div>

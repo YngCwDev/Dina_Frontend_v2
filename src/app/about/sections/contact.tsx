@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
@@ -10,9 +11,9 @@ const Contact = () => {
         integrated solutions, expert team, and commitment to excellence ensure
         that we consistently deliver results that exceed expectations.
       </p>
-      <div className="text-zinc-50 flex gap-4">
-        <Button variant={'ghost'} className="bg-red-700">Contact us</Button>
-        <Button variant={'ghost'} className="bg-zinc-950">Request a Quote</Button>
+      <div className="text-zinc-50 flex gap-4 items-center">
+        <Link href='/support'  className={buttonVariants({variant:'outline'})}>Contact us</Link>
+        <Link href='/support/quotepage'>Request a Quote</Link>
       </div>
     </div>
   );

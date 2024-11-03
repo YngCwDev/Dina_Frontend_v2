@@ -48,7 +48,7 @@ export const DesktopMenu = ({
                 transition={{ duration: 0.2 }}
               >
                 {/* SubNav Content */}
-                <ul className="flex gap-8 text-[14px]  justify-center divide-x">
+                <div className="flex gap-8 text-[14px]  justify-center divide-x">
                   {products.items.map((items) => {
                     return (
                       <div key={items.name}>
@@ -68,7 +68,7 @@ export const DesktopMenu = ({
                       </div>
                     );
                   })}
-                </ul>
+                </div>
               </motion.div>
             )}
           </li>

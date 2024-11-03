@@ -1,8 +1,8 @@
 import React  from "react";
-import Hero from "@/sections/about/hero";
-import Profile from "@/sections/about/profile";
-import Qualities from "@/sections/about/qualities";
-import Contact from "@/sections/about/contact";
+import Hero from "@/app/about/sections/hero";
+import Profile from "@/app/about/sections/profile";
+import Qualities from "@/app/about/sections/qualities";
+import Contact from "@/app/about/sections/contact";
 
 const About = () => {
   return (
