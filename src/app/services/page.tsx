@@ -1,8 +1,8 @@
-import Hero from "@/sections/services/hero";
-import Heavy from "@/sections/services/heavy";
+import Hero from "@/app/services/sections/hero";
+import Heavy from "@/app/services/sections/heavy";
 import React from "react";
-import Technical from "@/sections/services/technical";
-import Safety from "@/sections/services/safety";
+import Technical from "@/app/services/sections/technical";
+import Safety from "@/app/services/sections/safety";
 import Contact from "@/components/contact";
 
 const Services = () => {

@@ -1,6 +1,6 @@
-import Contact from '@/sections/support/contact'
-import Hero from '@/sections/support/hero'
-import Location from '@/sections/support/location'
+import Contact from '@/app/support/sections/contact'
+import Hero from '@/app/support/sections/hero'
+import Location from '@/app/support/sections/location'
 import React from 'react'
 
 const page = () => {

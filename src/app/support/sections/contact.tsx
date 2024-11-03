@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import {buttonVariants } from "@/components/ui/button";
 import { contacts } from "@/lib/contacts";
 import Link from "next/link";
 import React from "react";
@@ -29,13 +29,12 @@ const Contact = () => {
                 </div>
               ))}
               <div>
-                <Button
-                  variant={"ghost"}
-                  className="bg-white text-zinc-950 space-x-2"
+                <Link
+                   href='/' className={buttonVariants({variant:'red'})}
                 >
                   <MdWhatsapp size={20} />
                   <Link href="">Via Whatsapp</Link>
-                </Button>
+                </Link>
               </div>
             </div>
           </div>

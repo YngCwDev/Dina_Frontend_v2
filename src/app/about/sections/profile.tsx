@@ -1,17 +1,15 @@
-import Image from "next/image";
-import React from "react";
-import img2 from "./../../../public/img-2.png";
-import img3 from "./../../../public/img-3.png";
-import { MoveRight } from "lucide-react";
-import Link from "next/link";
+import React from 'react'
+import img2 from './../../../../public/img/img-2.png'
+import img3 from './../../../../public/img/img-3.png'
+import Image from 'next/image'
 
-const About = () => {
+const Profile = () => {
   return (
-    <div className="bg-zinc-200 bg-cover bg-center bg-no-repeat w-full p-[2%]  md:px-[18%] px-4 text-zinc-900 md:py-[2%] py-[10%]">
+    <div className="bg-zinc-50 w-full p-[2%] md:px-[18%] px-4 text-zinc-950 md:py-[5%] py-[10%]">
       <div className="bg-red-700 h-[10px] w-[60px]"></div>
       <div className="flex justify-between items-center flex-wrap">
         <div className="md:w-[45%]">
-          <h2 className="text-[2rem] font-bold mb-8 md:mt-0 mt-4">
+          <h2 className="text-[1.5rem] font-bold mb-8 md:mt-0 mt-4">
             Our Mission
           </h2>
           <p className="md:leading-loose leading-normal ">
@@ -24,7 +22,7 @@ const About = () => {
           </p>
         </div>
         <Image
-          className="md:w-[30vw] w-[100%]  md:my-0 my-4"
+          className="md:w-[30vw] w-[100%] md:my-0 my-4 "
           src={img2}
           alt=""
         />
@@ -32,12 +30,12 @@ const About = () => {
       <br />
       <div className="flex justify-between items-center flex-wrap">
         <Image
-          className="md:w-[30vw] w-[100%] order-last md:order-first md:my-0 my-4"
+          className="md:w-[30vw] w-[100%]  order-last md:order-first md:my-0 my-4 "
           src={img3}
           alt=""
         />
         <div className="md:w-[45%]">
-          <h2 className="text-[2rem] font-bold mb-8 md:mt-0 mt-4">
+          <h2 className="text-[1.5rem] font-bold mb-8 md:mt-0 mt-4">
             Why Choose Us?
           </h2>
           <div>
@@ -58,11 +56,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Link href="/about" className="flex relative right-0 items-center pt-8 transition-all duration-75 hover:font-semibold">
-        <span> Read Our Story</span>
-        <MoveRight strokeWidth={1.5} size={20} className="pt-1 hover:scale-x-150 duration-75" />
-      </Link>
     </div>
-  );
-};
-export default About;
+  )
+}
+
+export default Profile

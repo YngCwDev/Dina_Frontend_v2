@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
@@ -11,9 +12,9 @@ const Contact = () => {
         </p>
       </div>
       <div>
-        <Button variant={"ghost2"} className="bg-red-700 md:text-md text-xs ">
+        <Link  href='/' className={buttonVariants({variant:'red'})}>
           Contact Us
-        </Button>
+        </Link>
       </div>
     </div>
   );

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Search, X } from "lucide-react";
 
 
-const SearchBar = ({handleSearchClick}: {handleSearchClick: any}) => {
+type HandleSearchClick = MouseEventHandler<HTMLButtonElement> | undefined;
+
+
+const SearchBar = ({handleSearchClick}: {handleSearchClick: HandleSearchClick}) => {
   return (
     <div className="flex bg-white p-2">
       <div>

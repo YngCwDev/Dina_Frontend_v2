@@ -9,19 +9,19 @@ export const Banner = () => {
         <nav>
           <ul className="flex gap-4">
             <li>
-              <Link href='/support'>Locations</Link>
+              <Link href="/support">Locations</Link>
             </li>
             <li>
               <Link href="/support">Offices</Link>
             </li>
             <li>
-              <Link href="#">Careers</Link>
+              <Link href="/careers">Careers</Link>
             </li>
           </ul>
         </nav>
         <Link href="#" className="flex items-center gap-2">
           <CircleUser className="h-5 w-5" />
-          <span>Client Portal</span>
+          <Link href="/clientPortal">Client Portal</Link>
         </Link>
       </div>
     </div>

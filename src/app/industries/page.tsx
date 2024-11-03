@@ -1,6 +1,6 @@
 import Contact from '@/components/contact'
-import Hero from '@/sections/industries/hero'
-import IndustryList from '@/sections/industries/industries'
+import Hero from '@/app/industries/sections/hero'
+import IndustryList from '@/app/industries/sections/industries'
 import React from 'react'
 
 const Industries = () => {

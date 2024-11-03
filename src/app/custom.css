@@ -1,5 +1,5 @@
 .bg-hero{
-    background-image: url('./../../public/bg-1.png');
+    background-image: url('./../../public/img/bg-1.png');
 }
 
 .bg-home-hero{
@@ -11,15 +11,9 @@
 }
 
 .bg-grid{
-    background-image: url('./../../public/img-3.png');
+    background-image: url('./../../public/img/img-3.png');
 }
 
 .bg-about{
-    background-image: url('./../../public/bgimg-2.jpg');
-}
-
-/* Products page */
-
-.bg-electrical{
-    background-image: url('./../../public/products/electrical.png');
+    background-image: url('./../../public/img/bgimg-2.jpg');
 }

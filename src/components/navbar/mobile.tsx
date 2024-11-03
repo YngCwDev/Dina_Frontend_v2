@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { motion} from "framer-motion";
-import { Button } from "@/components/ui/button";
+import {buttonVariants } from "@/components/ui/button";
 import c_data from "@/lib/c_data";
 
 
@@ -59,9 +59,9 @@ export const MobileMenu = ({
               </div>
             ))}
             <li className="p-4 flex justify-center">
-              <Button variant="outline" className="w-full bg-red-800 text-white">
+              <Link  href='/support' className={buttonVariants({variant:'red'})}>
                 Contact Us
-              </Button>
+              </Link>
             </li>
           </ul>
         </nav>
