@@ -2,20 +2,21 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import img from "./../../../../../public/img/img-2.png";
+import img from "./../../../../public/img/img-2.png";
 import c_data from "@/lib/c_data";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 const products = c_data.categories[0].items;
 
-interface Index{
-  productIndex: number
+interface Index {
+  productIndex: number;
 }
 
 const Product = () => {
   const [visibleProduct, setVisible] = useState(0);
   const handleClick = (currentProduct: number) => {
-    setVisible(currentProduct); 
+    setVisible(currentProduct);
   };
   return (
     <div className="px-[10vw] py-[5vh] bg-white">
@@ -26,7 +27,7 @@ const Product = () => {
             <li
               key={product.name}
               onClick={() => handleClick(index)}
-              className=" bg-white w-72 p-4 cursor-pointer hover:bg-zinc-100"
+              className=" bg-white font-medium w-80 p-4 cursor-pointer hover:bg-zinc-100"
             >
               {product.name}
             </li>
@@ -44,13 +45,17 @@ const Content = ({ productIndex }: Index) => {
   const product = products[productIndex];
   return (
     <div className="space-y-4">
-      <div>
-        <h2>{product.description}</h2>
+      <div className="space-y-2">
+        <h2 className="text-xl font-medium">{product.description}</h2>
+        <div className="h-[2px] w-16 bg-red-700"></div>
       </div>
       <div>
         <ul className="flex flex-wrap gap-8">
           {product.sub_items.map((productElement) => (
-            <li key={productElement} className="w-80 bg-white drop-shadow-xl rounded-md">
+            <li
+              key={productElement}
+              className="w-80 bg-white cursor-pointer drop-shadow-md rounded-md transition-all duration-150 hover:scale-105 hover:shadow-lg"
+            >
               <div className="flex flex-col justify-between ">
                 <div className="w-full">
                   <Image
@@ -63,11 +68,26 @@ const Content = ({ productIndex }: Index) => {
                 <div className="relative p-4 space-y-4">
                   <h3 className="text-lg font-medium">{productElement}</h3>
                   <p className="text-wrap text-sm">
-                      I will say something later
+                    I will say something later
                   </p>
                   <div className="flex justify-between items-center">
-                    <Link href='/support' className={buttonVariants({ variant: "outline" })}>Contact Now</Link>
-                    <Link href='/products/productsview'>See more</Link>
+                    <Link
+                      href="/support"
+                      className={buttonVariants({ variant: "red" })}
+                    >
+                      Contact Now
+                    </Link>
+                    <Link
+                      href="/products/productsview"
+                      className="flex items-center hover:text-red-700"
+                    >
+                      See more
+                      <ChevronRight
+                        size={20}
+                        strokeWidth={1}
+                        className="relative top-[1px]"
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>

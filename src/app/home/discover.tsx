@@ -89,14 +89,7 @@ const Discover = () => {
           </Button>
         </div>
         <div>
-          <p className="md:text-lg text-sm md:text-start text-center text-muted-foreground pt-4 text-zinc-950">
-            At Dina Holding SA, we provide innovative solutions across various
-            sectors including mining, construction, energy, and healthcare. Our
-            services encompass heavy equipment rentals, technical consulting,
-            and the supply of essential materials like PPE and lubricants. We
-            are dedicated to enhancing productivity while ensuring the highest
-            safety standards.
-          </p>
+
         </div>
       </div>
     </section>

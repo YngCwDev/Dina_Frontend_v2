@@ -1,4 +1,4 @@
-import {buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { contacts } from "@/lib/contacts";
 import Link from "next/link";
 import React from "react";
@@ -29,11 +29,11 @@ const Contact = () => {
                 </div>
               ))}
               <div>
-                <Link
-                   href='/' className={buttonVariants({variant:'red'})}
-                >
-                  <MdWhatsapp size={20} />
-                  <Link href="">Via Whatsapp</Link>
+                <Link href="/" className={buttonVariants({ variant: "light" })}>
+                  <span className="flex gap-1 items-center">
+                    <MdWhatsapp size={20} />
+                    <p>Via Whatsapp</p>
+                  </span>
                 </Link>
               </div>
             </div>
@@ -41,8 +41,10 @@ const Contact = () => {
         </div>
         {/* Form */}
 
-        <div className="p-16 space-y-4" >
-          <h2 className="text-2xl font-semibold py-6 text-red-700">SEND US AN INQUERY</h2>
+        <div className="p-16 space-y-4">
+          <h2 className="text-2xl font-semibold py-6 text-red-700">
+            SEND US AN INQUERY
+          </h2>
           <Form />
         </div>
       </div>

@@ -1,22 +1,23 @@
+import Link from "next/link";
 import React from "react";
-import { CtaButton } from "./cta_button";
-
+import { buttonVariants } from "./ui/button";
 
 
 const Contact = () => {
   return (
-    <div className=" bg-zinc-900 text-white py-4">
-      <div className="container flex items-center gap-8">
-      <div className="space-y-4">
-        <h2 className="text-3xl font-bold">Let Us Help You</h2>
-        <p>
-          Let us help you achieve your project goals.
-          For inquiries or to request a quote, reach out to us.
+    <div className="lg:px-[20vw] p-2  bg-zinc-950 text-white flex justify-between items-center md:text-md text-sm">
+      <div>
+        <h2 className="font-semibold text-xl">
+          Can&apos;t find what you looking for?
+        </h2>
+        <p className="text-lg">
+          Don&apos;t hesitate to contact us for more information
         </p>
       </div>
-      <div className="flex gap-2 items-center mx-auto my-4 bg-zinc-800 rounded-xl w-fit text-">
-      <CtaButton classname=""/>
-      </div>
+      <div>
+        <Link href="/support" className={buttonVariants({ variant: "light" })}>
+          Contact Now
+        </Link>
       </div>
     </div>
   );

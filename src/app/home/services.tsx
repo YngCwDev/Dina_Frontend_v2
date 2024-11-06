@@ -26,7 +26,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-zinc-50 text-zinc-900 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white text-zinc-900 py-32 px-4 sm:px-6 lg:px-8">
       <div className="px-2 lg:container mx-auto text-center space-y-12">
         <div className="space-y-4">
           <h2 className="text-center text-red-700 text-3xl font-bold">
@@ -42,7 +42,7 @@ const Services = () => {
             <Link key={index} href="/">
               <Card
                 key={index}
-                className="bg-white py-8 border-none drop-shadow-lg text-zinc-950 hover:scale-105 transition-all duration-150 ease-in-out"
+                className="bg-white py-8 border-none  text-zinc-950 hover:scale-105 transition-all duration-150 ease-in-out"
               >
                 <CardHeader>
                   <quality.icon

@@ -3,8 +3,8 @@ import React  from "react";
 const ProductsHero = () => {
   return (
     <div className="bg-white">
-      <div className="bg-home-hero p-[12vw] bg-no-repeat"></div>
-      <div className="px-[15vw] py-20 space-y-6">
+      <div className="bg-home-hero p-[14vw] bg-no-repeat"></div>
+      <div className="px-[15vw] py-24 space-y-6">
         <h1 className="text-4xl font-bold text-red-700"> Our Products</h1>
         <p>
           Welcome to our Products Page, where we proudly showcase a
@@ -20,8 +20,8 @@ const ProductsHero = () => {
           productivity and safety.
         </p>
       </div>
-      <div className="flex justify-center divide-x-2 divide-zinc-400 bg-zinc-200 text-zinc-900 p-[1vw]">
-        <h3 className="text-2xl">Explore Our Products</h3>
+      <div className="flex justify-center  bg-zinc-900 text-white p-[1vw] mt-4">
+        <h3 className="text-2xl font-semibold">Explore Our Products</h3>
       </div>
     </div>
   );
