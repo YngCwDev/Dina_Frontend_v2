@@ -6,11 +6,9 @@ import Discover from "@/app/home/discover";
 import About from "@/app/home/about";
 import Quotecard from "@/app/home/quotecard";
 import Services from "@/app/home/services";
-import QuoteMassage from "@/app/home/quotemassage";
-import Contact from "@/app/home/contact";
+import Contact from "@/components/contact";
 import Support from "@/app/home/support";
 import Location from "@/app/home/location";
-
 
 const Page = () => {
   return (
@@ -24,11 +22,11 @@ const Page = () => {
       </section>
 
       <section>
-        <Discover />
-      </section>
-      
-      <section>
         <Support />
+      </section>
+
+      <section>
+        <Discover />
       </section>
 
       <section>
@@ -42,12 +40,12 @@ const Page = () => {
       <section>
         <Quotecard />
       </section>
+{/*       <section>
+        <QuoteMassage />
+      </section> */}
+
       <section>
-      <QuoteMassage/>
-      </section>
-      
-      <section>
-        <Contact/>
+        <Contact />
       </section>
     </>
   );

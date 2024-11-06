@@ -20,8 +20,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         ghost2: "hover:bg-accent hover:text-accent-foreground w-full",
         link: "text-primary underline-offset-4 hover:underline",
-        red:"border text-white border-input bg-red-700 shadow-sm hover:bg-zinc-50 hover:text-zinc-800",
-        black:"border text-white border-input bg-zinc-800 shadow-sm hover:bg-zinc-50 hover:text-zinc-800",
+        red:"text-white border-input bg-red-700 shadow-sm hover:bg-zinc-50 hover:text-zinc-800",
+        black:"text-white border-input bg-zinc-800 shadow-sm hover:bg-zinc-50 hover:text-zinc-800",
+        light:"text-zinc-800 border-input bg-zinc-50 shadow-sm hover:bg-zinc-700 hover:text-zinc-50",
+        lightToRed:"cursor-pointer text-zinc-800 border-input bg-white shadow-sm hover:bg-red-800 hover:text-zinc-50",
       },
       size: {
         default: "h-9 px-4 py-2",

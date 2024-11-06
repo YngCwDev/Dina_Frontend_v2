@@ -1,6 +1,6 @@
 import Contact from "@/components/contact";
-import { ProductsHero } from "@/app/products/sections/productsContent";
-import Product from "@/app/products/sections/productsview/product";
+import { ProductsHero } from "@/app/products/sections/hero";
+import Product from "@/app/products/sections/product";
 
 import React from "react";
 

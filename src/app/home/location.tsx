@@ -17,7 +17,7 @@ const Location = () => {
     }
   };
   return (
-    <div className="px-4 bg-zinc-50 lg:px-[20vw] py-[5vh]  border-b-zinc-200 border-b-[1px] space-y-4">
+    <div className="bg-zinc-50 pt-[5vh]  border-b-zinc-200 border-b-[1px] space-y-4">
       <div className=" flex flex-col items-center text-center gap-4">
         <h2 className="text-2xl font-bold text-red-700">
           Our Locations Across Mozambique
@@ -28,7 +28,7 @@ const Location = () => {
         </p>
       </div>
       <div>
-        <div>
+        <div className="flex items-center flex-col">
           <p className="pl-1 pb-2 text-sm">Choose one location:</p>
           <div className="flex">
             <Button

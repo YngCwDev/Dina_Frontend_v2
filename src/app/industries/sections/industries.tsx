@@ -1,5 +1,5 @@
 import c_data from "@/lib/c_data";
-import {ChevronRight} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -23,7 +23,10 @@ const IndustryList = () => {
         {c_data.categories.map((category) => {
           if (category.name === "Industries") {
             return category.items.map((industry) => (
-              <div key={industry.name} className="w-80 flex flex-col items-center gap-4 shadow-md rounded-md text-center bg-white border-zinc-200 border-[1px] p-8">
+              <div
+                key={industry.name}
+                className="w-80 flex flex-col items-center gap-4 shadow-sm rounded-md text-center bg-white border-zinc-200 border-[1px] p-8 transition-all hover:scale-105  duration 200 cursor-pointer hover:shadow-md"
+              >
                 <industry.icon
                   size={100}
                   strokeWidth={1}
@@ -34,13 +37,18 @@ const IndustryList = () => {
                   <h3 className="text-lg font-semibold">{industry.name}</h3>
                   <div className="bg-red-700 h-[2px] w-8 mx-auto"></div>
 
-                  <p>
-                   {industry.description}
-                  </p>
+                  <p>{industry.description}</p>
                 </div>
-                <Link href="#" className="flex">
+                <Link
+                  href="/industries/industryInfo"
+                  className="flex items-center hover:text-red-700"
+                >
                   <span>Learn more</span>
-                  <ChevronRight />
+                  <ChevronRight
+                    size={20}
+                    strokeWidth={1}
+                    className="mt-[1px]"
+                  />
                 </Link>
               </div>
             ));

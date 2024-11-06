@@ -19,9 +19,9 @@ export const Banner = () => {
             </li>
           </ul>
         </nav>
-        <Link href="#" className="flex items-center gap-2">
+        <Link href="/clientPortal" className="flex items-center gap-2">
           <CircleUser className="h-5 w-5" />
-          <Link href="/clientPortal">Client Portal</Link>
+          <span >Client Portal</span>
         </Link>
       </div>
     </div>

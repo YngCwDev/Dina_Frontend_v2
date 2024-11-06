@@ -14,7 +14,7 @@ const CtaButtonDark = ({classname}: style) => {
           Contact Now
         </Link> 
         <Link
-          href='/form'
+          href='/support/quotepage'
           className="flex items-center "
         >
           <span className="">Request a Quote</span><ChevronRight size={20} strokeWidth={1} className='relative top-[1px]'/>
@@ -31,7 +31,7 @@ const CtaButton = ({classname}: style) => {
           
         </Link> 
         <Link
-          href='/support/quote'
+          href='/support/quotepage'
           className="flex items-center "
         >
           <span className="font-medium">Request a Quote</span><ChevronRight size={20} strokeWidth={1}/>

@@ -69,14 +69,11 @@ const Navbar = () => {
 
           <Language openCategories={openCategories} handleHover={handleHover} />
 
-          <Link href="/support">
-            <Link
-              href="/support"
-              className={buttonVariants({ variant: "red" })}
-            >
+          <Link href="/support" className={buttonVariants({ variant: "red" })}>
+            <span className="flex gap-1 items-center">
               Contact Now
-              <Phone size={16} strokeWidth={1.8} className="ml-2"/>
-            </Link>
+              <Phone size={16} strokeWidth={1.8} className="ml-2" />
+            </span>
           </Link>
         </div>
         <Button

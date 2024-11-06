@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import img1 from "./../../../../public/img/hero2.png";
-import  c_data  from "@/lib/c_data";
 
 const Hero = () => {
   return (
@@ -11,7 +10,7 @@ const Hero = () => {
         <Image src={img1} alt="" className="w-full" />
       </div>
       <div className="space-y-4 py-8">
-        <div className="px-[15vw] py-20 space-y-8">
+        <div className="px-[15vw] py-[13vh] space-y-8">
           <h1 className="text-4xl text-red-700 font-bold">Our Services</h1>
           <p>
             Here’s a more detailed and polished version: We provide tailored
@@ -30,19 +29,8 @@ const Hero = () => {
         </div>
         {/* NavServices */}
         <div>
-          <div className="flex divide-x-2 justify-center py-8 text-lg text-white font-semibold bg-zinc-950 ">
-            {c_data.categories[1].items.map((item, index) => {
-              if (index < 3) {
-                return (
-                  <div
-                    key={item.name}
-                    className="px-16 hover:text-red-700 transition-colors duration-150"
-                  >
-                    {item.name}
-                  </div>
-                );
-              }
-            })}
+          <div className="flex divide-x-2 justify-center py-8 text-2xl text-white font-semibold bg-zinc-900">
+            <h2>Explore Our Services</h2>
           </div>
         </div>
       </div>

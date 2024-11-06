@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="bg-zinc-200 bg-cover bg-center bg-no-repeat w-full p-[2%]  md:px-[18%] px-4 text-zinc-900 md:py-[2%] py-[10%]">
+    <div className="bg-zinc-100 bg-cover bg-center bg-no-repeat w-full p-[2%]  md:px-[18%] px-4 text-zinc-900 md:py-[2%] py-[10%]">
       <div className="bg-red-700 h-[10px] w-[60px]"></div>
       <div className="flex justify-between items-center flex-wrap">
         <div className="md:w-[45%]">
